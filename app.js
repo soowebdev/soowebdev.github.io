@@ -1,4 +1,3 @@
-// Data for Root-Me (based on the fetched profile)
 const rootMeData = {
     username: "ctrlstack",
     rank: 51689,
@@ -18,7 +17,6 @@ const rootMeData = {
     ]
 };
 
-// Data for FCSC 2025 (based on search results and user input)
 const fcscData = {
     year: 2025,
     categories: [
