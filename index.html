@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ctrlstack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="py-12 px-6 max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left">
+                <h1 class="text-6xl font-extrabold gradient-text mb-2 tracking-tight">ctrlstack</h1>
+                <p class="text-2xl text-slate-400 font-medium">Spécialiste DevOps & Cybersécurité</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4 text-slate-500">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> France</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-envelope"></i> soheib.bouchenak@gmail.com</span>
+                </div>
+            </div>
+            <div class="flex gap-4 mt-8 md:mt-0">
+                <a href="https://www.root-me.org/ctrlstack?lang=fr" target="_blank" class="w-14 h-14 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-sky-500 transition-all text-2xl shadow-lg">
+                    <i class="fa-solid fa-flag"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-8">
+        <section id="about" class="mb-16">
+            <div class="card p-8 rounded-2xl border-none bg-gradient-to-br from-slate-800/50 to-slate-900/50">
+                <h2 class="text-2xl font-bold mb-4 text-sky-400 italic font-mono">&lt;about-me /&gt;</h2>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Spécialisé en <span class="text-white font-bold">DevOps</span> avec une forte culture <span class="text-white font-bold">Cybersécurité</span>. 
+                    Mon approche combine l'automatisation des infrastructures (CI/CD, IaC) et l'investigation numérique (Forensic). 
+                    Je m'efforce de bâtir des environnements robustes, sécurisés et scalables.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-bolt text-yellow-400"></i>
+                Compétences DevOps & Sec
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="card p-4 rounded-xl text-center">
+                    <i class="fa-brands fa-docker text-sky-400 text-2xl mb-2"></i>
+                    <p class="font-bold">Docker & K8s</p>
+                </div>
+                <div class="card p-4 rounded-xl text-center">
+                    <i class="fa-solid fa-gears text-indigo-400 text-2xl mb-2"></i>
+                    <p class="font-bold">CI/CD (GitLab/GitHub)</p>
+                </div>
+                <div class="card p-4 rounded-xl text-center">
+                    <i class="fa-solid fa-shield-halved text-emerald-400 text-2xl mb-2"></i>
+                    <p class="font-bold">DevSecOps</p>
+                </div>
+                <div class="card p-4 rounded-xl text-center">
+                    <i class="fa-solid fa-magnifying-glass text-rose-400 text-2xl mb-2"></i>
+                    <p class="font-bold">Forensic & Sec</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="root-me" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-skull-crossbones text-sky-400"></i>
+                Root-Me Achievements
+            </h2>
+            <div id="root-me-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Loading state -->
+                <p class="text-slate-400 italic">Chargement des données Root-Me...</p>
+            </div>
+        </section>
+
+        <section id="fcsc" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-indigo-400"></i>
+                FCSC 2025 - Forensic Series
+            </h2>
+            <div id="fcsc-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Loading state -->
+                <p class="text-slate-400 italic">Chargement des données FCSC...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500">
+        <p>&copy; 2026 ctrlstack. Fait avec passion.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
