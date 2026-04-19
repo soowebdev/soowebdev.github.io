@@ -139,11 +139,46 @@ function renderFCSC() {
     container.innerHTML = html;
 }
 
+function renderVeille() {
+    fetch('data/veille.json')
+        .then(response => response.json())
+        .then(data => {
+            const leaksContainer = document.getElementById('leaks-content');
+            const opensourceContainer = document.getElementById('opensource-content');
+
+            if (leaksContainer) {
+                leaksContainer.innerHTML = data.leaks.map(leak => `
+                    <div class="p-4 rounded-xl bg-slate-900/50 border border-rose-500/10 hover:border-rose-500/30 transition-colors">
+                        <div class="flex justify-between items-start mb-1">
+                            <span class="text-rose-300 font-bold text-sm">${leak.source}</span>
+                            <span class="text-[10px] text-slate-500 uppercase">${leak.date}</span>
+                        </div>
+                        <p class="text-xs text-slate-400">${leak.description}</p>
+                    </div>
+                `).join('');
+            }
+
+            if (opensourceContainer) {
+                opensourceContainer.innerHTML = data.opensource.map(project => `
+                    <div class="p-4 rounded-xl bg-slate-900/50 border border-emerald-500/10 hover:border-emerald-500/30 transition-colors">
+                        <div class="flex justify-between items-start mb-1">
+                            <span class="text-emerald-300 font-bold text-sm italic">${project.name}</span>
+                            <span class="text-[10px] text-slate-500 uppercase">${project.category}</span>
+                        </div>
+                        <p class="text-xs text-slate-400">${project.description}</p>
+                    </div>
+                `).join('');
+            }
+        })
+        .catch(err => console.error('Erreur lors du chargement de la veille:', err));
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     // Simulate a small delay for "loading" effect
     setTimeout(() => {
         renderRootMe();
         renderFCSC();
+        renderVeille();
     }, 800);
 });

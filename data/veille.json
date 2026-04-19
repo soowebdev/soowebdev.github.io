@@ -1,0 +1,36 @@
+{
+  "leaks": [
+    {
+      "source": "Police Nationale",
+      "date": "16 Avril 2026",
+      "description": "170 000 agents concernés via e-Campus (Noms, emails, logins)."
+    },
+    {
+      "source": "ÉduConnect",
+      "date": "14 Avril 2026",
+      "description": "Éducation Nationale : Identifiants, noms et établissements."
+    },
+    {
+      "source": "Basic Fit",
+      "date": "13 Avril 2026",
+      "description": "Données membres et informations bancaires exposées."
+    }
+  ],
+  "opensource": [
+    {
+      "name": "PostHog",
+      "category": "Product Analytics",
+      "description": "Plateforme d'analyse complète tout-en-un pour les développeurs."
+    },
+    {
+      "name": "Umami",
+      "category": "Web Analytics",
+      "description": "Alternative à Google Analytics axée sur la vie privée et sans cookies."
+    },
+    {
+      "name": "Plane",
+      "category": "Project Management",
+      "description": "Gestion de projet moderne et open-source (Alternative à Jira)."
+    }
+  ]
+}

@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             background-color: #0f172a;
             color: #f8fafc;
@@ -44,11 +47,12 @@
                 <a href="https://www.root-me.org/ctrlstack?lang=fr" target="_blank" title="Root-Me" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-sky-500 transition-all text-xl shadow-lg border border-slate-700">
                     <i class="fa-solid fa-flag"></i>
                 </a>
-                <a href="https://cvdesignr.com/p/69e0175f55974" target="_blank" title="Voir CV" class="px-6 h-12 rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold hover:scale-105 transition-all shadow-lg">
+                <a href="CV_SB.pdf" download="CV_Soheib_BOUCHENAK.pdf" title="Voir CV" class="px-6 h-12 rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold hover:scale-105 transition-all shadow-lg">
                     <i class="fa-solid fa-file-pdf mr-2"></i> Mon CV
                 </a>
             </div>
         </div>
+        
     </header>
 
     <main class="max-w-5xl mx-auto px-6 py-8">
@@ -117,29 +121,37 @@
                 <i class="fa-solid fa-bolt text-yellow-400"></i>
                 Compétences
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="card p-6 rounded-xl">
-                    <h3 class="text-sky-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-globe"></i> Web / API</h3>
+                    <h3 class="text-sky-400 font-bold mb-4 flex items-center gap-2"><i class="fa-brands fa-github"></i> Versioning</h3>
                     <ul class="text-slate-300 text-sm space-y-2">
-                        <li>HTTP requests / responses</li>
-                        <li>API REST (GET / POST)</li>
-                        <li>Analyse via DevTools</li>
+                        <li>Git / GitHub (Bases)</li>
+                        <li>Gestion de dépôts</li>
+                        <li>Notions de commits / push</li>
                     </ul>
                 </div>
                 <div class="card p-6 rounded-xl">
-                    <h3 class="text-emerald-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-infinity"></i> DevOps</h3>
+                    <h3 class="text-emerald-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Sécurité</h3>
                     <ul class="text-slate-300 text-sm space-y-2">
-                        <li>Git / GitHub (Versioning)</li>
-                        <li>CI/CD (Notions pipelines)</li>
-                        <li>Scripts Python / Bash (Bases)</li>
+                        <li>Burp Suite (Bases)</li>
+                        <li>Analyse de requêtes HTTP</li>
+                        <li>Notions d'OSINT</li>
                     </ul>
                 </div>
                 <div class="card p-6 rounded-xl">
-                    <h3 class="text-indigo-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-microchip"></i> Systèmes</h3>
+                    <h3 class="text-indigo-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-code"></i> Outils</h3>
                     <ul class="text-slate-300 text-sm space-y-2">
-                        <li>Linux (Terminal, Permissions)</li>
-                        <li>Windows Server (Administration)</li>
-                        <li>Virtualisation (VM, VirtualBox, WSL)</li>
+                        <li>Visual Studio Code</li>
+                        <li>Terminal Linux / Bash</li>
+                        <li>DevTools Navigateur</li>
+                    </ul>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-rose-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-server"></i> Systèmes</h3>
+                    <ul class="text-slate-300 text-sm space-y-2">
+                        <li>Linux (Bases)</li>
+                        <li>Windows (Bases)</li>
+                        <li>Virtualisation (VirtualBox)</li>
                     </ul>
                 </div>
             </div>
@@ -174,6 +186,47 @@
             </div>
         </section>
 
+        <section id="veille" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                <i class="fa-solid fa-satellite-dish text-sky-400 animate-pulse"></i>
+                Veille Technologique
+                <span class="text-[10px] px-2 py-0.5 bg-rose-500/20 text-rose-400 rounded-full border border-rose-500/30 animate-pulse ml-2 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 bg-rose-500 rounded-full"></span> LIVE
+                </span>
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Data Leaks Column -->
+                <div class="card p-8 rounded-3xl border-rose-500/10 bg-gradient-to-br from-slate-800/40 to-rose-900/10">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold text-rose-400 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            Dernières Fuites
+                        </h3>
+                        <a href="https://bonjourlafuite.eu.org/" target="_blank" class="text-xs text-slate-500 hover:text-rose-400 transition-colors underline">Source: bonjourlafuite</a>
+                    </div>
+                    <div id="leaks-content" class="space-y-4">
+                        <!-- Content will be loaded dynamically -->
+                        <p class="text-slate-400 italic text-xs">Chargement des dernières fuites...</p>
+                    </div>
+                </div>
+
+                <!-- Open Source Column -->
+                <div class="card p-8 rounded-3xl border-emerald-500/10 bg-gradient-to-br from-slate-800/40 to-emerald-900/10">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            Trending Open Source
+                        </h3>
+                        <a href="https://opensourceprojects.cc/" target="_blank" class="text-xs text-slate-500 hover:text-emerald-400 transition-colors underline">Source: opensourceprojects</a>
+                    </div>
+                    <div id="opensource-content" class="space-y-4">
+                        <!-- Content will be loaded dynamically -->
+                        <p class="text-slate-400 italic text-xs">Chargement des projets open source...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="root-me" class="mb-16">
             <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
                 <i class="fa-solid fa-skull-crossbones text-sky-400"></i>
@@ -185,7 +238,7 @@
             </div>
         </section>
 
-        <section id="fcsc" class="mb-16">
+        <section id="fcsc" class="mb-24">
             <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
                 <i class="fa-solid fa-shield-halved text-indigo-400"></i>
                 FCSC 2025 - Forensic Series
@@ -193,6 +246,26 @@
             <div id="fcsc-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Loading state -->
                 <p class="text-slate-400 italic">Chargement des données FCSC...</p>
+            </div>
+        </section>
+
+        <section id="contact-download" class="mb-16">
+            <div class="card p-10 rounded-3xl text-center bg-gradient-to-br from-slate-800/80 to-indigo-900/40 border-indigo-500/20 shadow-2xl">
+                <h2 class="text-4xl font-extrabold mb-4 gradient-text">Intéressé par mon profil ?</h2>
+                <p class="text-slate-400 mb-8 max-w-2xl mx-auto text-lg">
+                    Je suis à la recherche d'une <span class="text-white font-bold">alternance</span> pour mon cursus DSP DevOps. 
+                    N'hésitez pas à télécharger ma version PDF ou à me contacter directement.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="CV_SB.pdf" download="CV_Soheib_BOUCHENAK.pdf" class="px-8 py-4 rounded-2xl bg-white text-slate-900 font-bold hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-lg">
+                        <i class="fa-solid fa-file-pdf text-xl text-rose-600"></i>
+                        Télécharger le CV (PDF)
+                    </a>
+                    <a href="mailto:soheib.bouchenak@gmail.com" class="px-8 py-4 rounded-2xl bg-sky-500 text-white font-bold hover:bg-sky-400 hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-lg shadow-sky-500/20">
+                        <i class="fa-solid fa-paper-plane text-xl"></i>
+                        Me contacter par mail
+                    </a>
+                </div>
             </div>
         </section>
     </main>
