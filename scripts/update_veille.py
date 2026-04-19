@@ -5,14 +5,12 @@ import os
 from datetime import datetime
 
 def update_veille():
-    # 1. Fetch Data Leaks from BonjourLaFuite
+    # 1. Ajouter les data leak depuis BonjourLaFuite
     leaks = []
     try:
         response = requests.get('https://bonjourlafuite.eu.org/')
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # Assuming leaks are in rows or cards, adjust based on actual HTML
-            # This is a simplified example based on common patterns
             rows = soup.find_all('div', class_='leak-item')[:3] # Get top 3
             if not rows:
                 # Fallback to a different selector if the above doesn't work
@@ -27,7 +25,7 @@ def update_veille():
     except Exception as e:
         print(f"Error fetching leaks: {e}")
 
-    # 2. Fetch Trending Open Source from OpenSourceProjects
+    # 2. Ajouter les projets tendants depuis OpenSourceProjects
     opensource = []
     try:
         response = requests.get('https://opensourceprojects.cc/')
@@ -46,7 +44,7 @@ def update_veille():
     except Exception as e:
         print(f"Error fetching opensource: {e}")
 
-    # Fallback data if scraping fails (using the ones we have now)
+    # Back-up au cas où la scraping échoue
     if not leaks:
         leaks = [
             {"source": "Police Nationale", "date": "16 Avril 2026", "description": "170 000 agents concernés via e-Campus (Noms, emails, logins)."},
@@ -60,7 +58,7 @@ def update_veille():
             {"name": "Plane", "category": "Project Management", "description": "Gestion de projet moderne et open-source (Alternative à Jira)."}
         ]
 
-    # 3. Update JSON file
+    # 3. Mise à jour du fichier JSON 
     data = {"leaks": leaks, "opensource": opensource}
     os.makedirs('data', exist_ok=True)
     with open('data/veille.json', 'w', encoding='utf-8') as f:
