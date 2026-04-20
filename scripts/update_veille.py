@@ -17,30 +17,44 @@ def update_veille():
         response = requests.get('https://bonjourlafuite.eu.org/', headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # On cherche les lignes de fuites (souvent dans des colonnes col-md-10)
-            # On va cibler les éléments qui contiennent les pastilles de statut et qui sont suivis par un nom
+            
+            # On cherche tous les blocs qui contiennent une date (souvent dans col-md-2)
+            # et le nom de l'entreprise (souvent dans col-md-10 avec une pastille)
             
             seen = set()
-            # On cherche les éléments qui commencent par une pastille
-            for tag in soup.find_all(['div', 'span', 'td']):
-                text = tag.get_text().strip()
-                if text and (text.startswith('🟢') or text.startswith('🟠') or text.startswith('🔴')):
-                    name = text.replace('🟢', '').replace('🟠', '').replace('🔴', '').strip()
-                    # On filtre pour ne pas prendre de phrases trop longues ou de doublons
-                    if name and name not in seen and len(name) < 40:
+            # On parcourt les lignes de la table ou les blocs div
+            for row in soup.find_all(['tr', 'div', 'article']):
+                text = row.get_text().strip()
+                # On cherche la pastille de couleur
+                if any(emoji in text for emoji in ['🟢', '🟠', '🔴']):
+                    # Extraction propre
+                    # On cherche la date (ex: "17 avril 2026")
+                    date_match = datetime.now().strftime("%d %B %Y")
+                    for td in row.find_all(['td', 'div']):
+                        td_text = td.get_text().strip()
+                        if any(m in td_text.lower() for m in ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']):
+                            date_match = td_text
+                            break
+                    
+                    # On cherche le nom (celui qui a la pastille)
+                    name = ""
+                    for tag in row.find_all(['td', 'div', 'span', 'a']):
+                        tag_text = tag.get_text().strip()
+                        if any(emoji in tag_text for emoji in ['🟢', '🟠', '🔴']):
+                            name = tag_text.replace('🟢', '').replace('🟠', '').replace('🔴', '').replace('Source', '').strip()
+                            # On nettoie les éventuels retours à la ligne ou dates qui auraient fuité dans le nom
+                            if '\n' in name:
+                                name = name.split('\n')[-1].strip()
+                            break
+                    
+                    if name and name not in seen and len(name) < 50:
                         seen.add(name)
-                        # On cherche la date dans le même bloc ou le bloc précédent
-                        # Souvent la date est dans un col-md-2 juste avant
-                        date = datetime.now().strftime("%d %B %Y")
-                        prev_tag = tag.find_previous(['div', 'span', 'td'], class_='col-md-2')
-                        if prev_tag:
-                            date = prev_tag.get_text().strip()
-                        
                         leaks.append({
                             "source": name,
-                            "date": date,
+                            "date": date_match,
                             "description": "Nouvelle fuite de données répertoriée."
                         })
+                
                 if len(leaks) >= 3: break
             
             print(f"Trouvé {len(leaks)} fuites.")
