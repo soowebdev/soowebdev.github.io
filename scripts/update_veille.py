@@ -18,44 +18,43 @@ def update_veille():
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            # On cherche tous les blocs qui contiennent une date (souvent dans col-md-2)
-            # et le nom de l'entreprise (souvent dans col-md-10 avec une pastille)
+            # On cherche les blocs "timeline-entry"
+            entries = soup.find_all('div', class_='timeline-entry')[:3]
             
-            seen = set()
-            # On parcourt les lignes de la table ou les blocs div
-            for row in soup.find_all(['tr', 'div', 'article']):
-                text = row.get_text().strip()
-                # On cherche la pastille de couleur
-                if any(emoji in text for emoji in ['🟢', '🟠', '🔴']):
-                    # Extraction propre
-                    # On cherche la date (ex: "17 avril 2026")
-                    date_match = datetime.now().strftime("%d %B %Y")
-                    for td in row.find_all(['td', 'div']):
-                        td_text = td.get_text().strip()
-                        if any(m in td_text.lower() for m in ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']):
-                            date_match = td_text
-                            break
-                    
-                    # On cherche le nom (celui qui a la pastille)
-                    name = ""
-                    for tag in row.find_all(['td', 'div', 'span', 'a']):
-                        tag_text = tag.get_text().strip()
-                        if any(emoji in tag_text for emoji in ['🟢', '🟠', '🔴']):
-                            name = tag_text.replace('🟢', '').replace('🟠', '').replace('🔴', '').replace('Source', '').strip()
-                            # On nettoie les éventuels retours à la ligne ou dates qui auraient fuité dans le nom
-                            if '\n' in name:
-                                name = name.split('\n')[-1].strip()
-                            break
-                    
-                    if name and name not in seen and len(name) < 50:
-                        seen.add(name)
-                        leaks.append({
-                            "source": name,
-                            "date": date_match,
-                            "description": "Nouvelle fuite de données répertoriée."
-                        })
+            for entry in entries:
+                # Extraction de la date
+                time_tag = entry.find('time')
+                date = time_tag.get_text().strip() if time_tag else datetime.now().strftime("%d %B %Y")
                 
-                if len(leaks) >= 3: break
+                # Extraction du nom (dans le h2, après l'icône et la pastille)
+                h2 = entry.find('h2')
+                if h2:
+                    # On récupère tout le texte et on nettoie les symboles
+                    full_name = h2.get_text().strip()
+                    # On enlève la pastille (🟢, 🟠, 🔴) et l'espace insécable si présent
+                    name = full_name.replace('🟢', '').replace('🟠', '').replace('🔴', '').strip()
+                    # On nettoie les éventuels espaces bizarres (&nbsp;)
+                    name = name.replace('\xa0', ' ')
+                else:
+                    name = "Inconnu"
+                
+                # Extraction de la description (premier paragraphe ou liste d'atouts)
+                desc_tag = entry.find('p')
+                if desc_tag:
+                    desc = desc_tag.get_text().strip()
+                    if not desc and entry.find('ul'):
+                        # Si le p est vide, on prend les premiers éléments de la liste
+                        items = [li.get_text().strip() for li in entry.find('ul').find_all('li')[:2]]
+                        desc = "Données : " + ", ".join(items)
+                else:
+                    desc = "Nouvelle fuite de données répertoriée."
+
+                if name and name != "Inconnu":
+                    leaks.append({
+                        "source": name,
+                        "date": date,
+                        "description": desc[:100] + "..." if len(desc) > 100 else desc
+                    })
             
             print(f"Trouvé {len(leaks)} fuites.")
     except Exception as e:
