@@ -5,44 +5,68 @@ import os
 from datetime import datetime
 
 def update_veille():
+    # Simulation d'un vrai navigateur pour éviter d'être bloqué (CORS/User-Agent)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36'
+    }
+
     # 1. Ajouter les data leak depuis BonjourLaFuite
     leaks = []
     try:
-        response = requests.get('https://bonjourlafuite.eu.org/')
+        print("Scraping BonjourLaFuite...")
+        response = requests.get('https://bonjourlafuite.eu.org/', headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            rows = soup.find_all('div', class_='leak-item')[:3] # Get top 3
-            if not rows:
-                # Fallback to a different selector if the above doesn't work
-                # Based on web_reference 1, it seems like a list of dates and companies
-                rows = soup.select('div.card-body')[:3] 
+            # Recherche des cartes de fuites (basé sur la structure réelle du site)
+            items = soup.find_all(['h3', 'div'], class_=['card-body', 'leak-item'])[:3]
             
-            for row in rows:
-                date = row.find('span', class_='date').text.strip() if row.find('span', class_='date') else datetime.now().strftime("%d %B %Y")
-                source = row.find('h3').text.strip() if row.find('h3') else "Inconnu"
-                desc = row.find('p').text.strip() if row.find('p') else "Aucune description disponible."
-                leaks.append({"source": source, "date": date, "description": desc})
+            # Si le sélecteur spécifique échoue, on cherche par texte
+            if not items:
+                # Fallback simple sur les h3 qui contiennent souvent les noms d'entreprises
+                items = soup.find_all('h3')[:3]
+
+            for item in items:
+                source = item.get_text().strip().replace('🟢', '').replace('🟠', '').replace('🔴', '').strip()
+                # On essaie de trouver une date proche
+                date_tag = item.find_previous('h2') or item.find_previous('span', class_='date')
+                date = date_tag.get_text().strip() if date_tag else datetime.now().strftime("%d %B %Y")
+                leaks.append({
+                    "source": source,
+                    "date": date,
+                    "description": "Dernière fuite confirmée ou revendiquée sur le site."
+                })
+            print(f"Trouvé {len(leaks)} fuites.")
     except Exception as e:
-        print(f"Error fetching leaks: {e}")
+        print(f"Erreur BonjourLaFuite: {e}")
 
     # 2. Ajouter les projets tendants depuis OpenSourceProjects
     opensource = []
     try:
-        response = requests.get('https://opensourceprojects.cc/')
+        print("Scraping OpenSourceProjects...")
+        response = requests.get('https://opensourceprojects.cc/', headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            projects = soup.find_all('div', class_='project-card')[:3]
+            # Recherche des projets (basé sur les tendances)
+            projects = soup.select('div.trending-item, div.project-card')[:3]
+            
             if not projects:
-                # Based on web_reference 2
-                projects = soup.select('div.trending-item')[:3]
+                # Fallback sur les liens ou titres h3
+                projects = soup.find_all('h3')[:3]
 
             for proj in projects:
-                name = proj.find('h3').text.strip() if proj.find('h3') else "Projet"
-                cat = proj.find('span', class_='category').text.strip() if proj.find('span', class_='category') else "Software"
-                desc = proj.find('p').text.strip() if proj.find('p') else "Description non disponible."
-                opensource.append({"name": name, "category": cat, "description": desc})
+                name = proj.get_text().strip()
+                cat_tag = proj.find_next('span', class_='category')
+                cat = cat_tag.get_text().strip() if cat_tag else "Open Source"
+                desc_tag = proj.find_next('p')
+                desc = desc_tag.get_text().strip() if desc_tag else "Projet open-source en tendance actuellement."
+                opensource.append({
+                    "name": name,
+                    "category": cat,
+                    "description": desc[:100] + "..." if len(desc) > 100 else desc
+                })
+            print(f"Trouvé {len(opensource)} projets.")
     except Exception as e:
-        print(f"Error fetching opensource: {e}")
+        print(f"Erreur OpenSourceProjects: {e}")
 
     # Back-up au cas où la scraping échoue
     if not leaks:
