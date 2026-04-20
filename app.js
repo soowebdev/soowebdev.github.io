@@ -140,7 +140,8 @@ function renderFCSC() {
 }
 
 function renderVeille() {
-    fetch('data/veille.json')
+    // Ajout d'un paramètre unique pour éviter le cache du navigateur
+    fetch('data/veille.json?t=' + new Date().getTime())
         .then(response => response.json())
         .then(data => {
             const leaksContainer = document.getElementById('leaks-content');
