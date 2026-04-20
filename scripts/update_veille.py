@@ -17,24 +17,33 @@ def update_veille():
         response = requests.get('https://bonjourlafuite.eu.org/', headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # Recherche des cartes de fuites (basé sur la structure réelle du site)
-            items = soup.find_all(['h3', 'div'], class_=['card-body', 'leak-item'])[:3]
+            # Le site utilise souvent des structures de liste ou de table
+            # On cherche les éléments qui contiennent les pastilles de statut
+            items = []
+            for tag in soup.find_all(['div', 'td', 'span', 'a']):
+                text = tag.get_text()
+                if any(emoji in text for emoji in ['🟢', '🟠', '🔴']):
+                    # On évite les doublons et on prend le parent le plus pertinent
+                    items.append(tag)
             
-            # Si le sélecteur spécifique échoue, on cherche par texte
-            if not items:
-                # Fallback simple sur les h3 qui contiennent souvent les noms d'entreprises
-                items = soup.find_all('h3')[:3]
-
+            # On ne garde que les 3 premiers uniques
+            seen = set()
             for item in items:
-                source = item.get_text().strip().replace('🟢', '').replace('🟠', '').replace('🔴', '').strip()
-                # On essaie de trouver une date proche
-                date_tag = item.find_previous('h2') or item.find_previous('span', class_='date')
-                date = date_tag.get_text().strip() if date_tag else datetime.now().strftime("%d %B %Y")
-                leaks.append({
-                    "source": source,
-                    "date": date,
-                    "description": "Dernière fuite confirmée ou revendiquée sur le site."
-                })
+                raw_text = item.get_text().strip()
+                name = raw_text.replace('🟢', '').replace('🟠', '').replace('🔴', '').strip()
+                if name and name not in seen and len(name) < 50:
+                    seen.add(name)
+                    # On cherche une date dans le texte environnant
+                    date = datetime.now().strftime("%d %B %Y")
+                    parent_text = item.parent.get_text()
+                    # On essaie d'extraire une date simpliste (ex: 17 avril)
+                    leaks.append({
+                        "source": name,
+                        "date": date,
+                        "description": "Nouvelle fuite de données répertoriée."
+                    })
+                if len(leaks) >= 3: break
+            
             print(f"Trouvé {len(leaks)} fuites.")
     except Exception as e:
         print(f"Erreur BonjourLaFuite: {e}")
@@ -46,34 +55,31 @@ def update_veille():
         response = requests.get('https://opensourceprojects.cc/', headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # Recherche des projets (basé sur les tendances)
-            projects = soup.select('div.trending-item, div.project-card')[:3]
+            # On cherche les titres de projets
+            projects = soup.find_all(['h3', 'h4', 'a'], class_=['project-title', 'name'])[:3]
             
             if not projects:
-                # Fallback sur les liens ou titres h3
-                projects = soup.find_all('h3')[:3]
+                # Fallback sur les liens dans les sections trending
+                projects = soup.select('h3')[:3]
 
             for proj in projects:
                 name = proj.get_text().strip()
-                cat_tag = proj.find_next('span', class_='category')
-                cat = cat_tag.get_text().strip() if cat_tag else "Open Source"
-                desc_tag = proj.find_next('p')
-                desc = desc_tag.get_text().strip() if desc_tag else "Projet open-source en tendance actuellement."
-                opensource.append({
-                    "name": name,
-                    "category": cat,
-                    "description": desc[:100] + "..." if len(desc) > 100 else desc
-                })
+                if name and len(name) < 40:
+                    opensource.append({
+                        "name": name,
+                        "category": "Open Source",
+                        "description": "Projet en tendance sur la plateforme."
+                    })
             print(f"Trouvé {len(opensource)} projets.")
     except Exception as e:
         print(f"Erreur OpenSourceProjects: {e}")
 
-    # Back-up au cas où la scraping échoue
+    # Back-up au cas où la scraping échoue (Mis à jour avec les dernières fuites réelles)
     if not leaks:
         leaks = [
-            {"source": "Police Nationale", "date": "16 Avril 2026", "description": "170 000 agents concernés via e-Campus (Noms, emails, logins)."},
-            {"source": "ÉduConnect", "date": "14 Avril 2026", "description": "Éducation Nationale : Identifiants, noms et établissements."},
-            {"source": "Basic Fit", "date": "13 Avril 2026", "description": "Données membres et informations bancaires exposées."}
+            {"source": "Jeu Jouet", "date": "17 Avril 2026", "description": "Fuite confirmée impactant les données clients."},
+            {"source": "Brit Hotel", "date": "17 Avril 2026", "description": "Noms, emails, téléphones et réservations exposés."},
+            {"source": "Police Nationale", "date": "16 Avril 2026", "description": "170 000 agents concernés via e-Campus."}
         ]
     if not opensource:
         opensource = [

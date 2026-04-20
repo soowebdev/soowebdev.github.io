@@ -2,8 +2,8 @@ name: Update Veille Technologique
 
 on:
   schedule:
-    - cron: '0 8 * * *' # Chaque jour à 8 heure, ça se réinitialise
-  workflow_dispatch: # Permet de déclencher manuellement le workflow
+    - cron: '0 */6 * * *' # Le robot passe toutes les 6 heures désormais
+  workflow_dispatch: # Permet toujours de le lancer à la main si besoin
 
 jobs:
   update-data:
