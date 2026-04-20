@@ -17,31 +17,30 @@ def update_veille():
         response = requests.get('https://bonjourlafuite.eu.org/', headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # Le site utilise souvent des structures de liste ou de table
-            # On cherche les éléments qui contiennent les pastilles de statut
-            items = []
-            for tag in soup.find_all(['div', 'td', 'span', 'a']):
-                text = tag.get_text()
-                if any(emoji in text for emoji in ['🟢', '🟠', '🔴']):
-                    # On évite les doublons et on prend le parent le plus pertinent
-                    items.append(tag)
+            # On cherche les lignes de fuites (souvent dans des colonnes col-md-10)
+            # On va cibler les éléments qui contiennent les pastilles de statut et qui sont suivis par un nom
             
-            # On ne garde que les 3 premiers uniques
             seen = set()
-            for item in items:
-                raw_text = item.get_text().strip()
-                name = raw_text.replace('🟢', '').replace('🟠', '').replace('🔴', '').strip()
-                if name and name not in seen and len(name) < 50:
-                    seen.add(name)
-                    # On cherche une date dans le texte environnant
-                    date = datetime.now().strftime("%d %B %Y")
-                    parent_text = item.parent.get_text()
-                    # On essaie d'extraire une date simpliste (ex: 17 avril)
-                    leaks.append({
-                        "source": name,
-                        "date": date,
-                        "description": "Nouvelle fuite de données répertoriée."
-                    })
+            # On cherche les éléments qui commencent par une pastille
+            for tag in soup.find_all(['div', 'span', 'td']):
+                text = tag.get_text().strip()
+                if text and (text.startswith('🟢') or text.startswith('🟠') or text.startswith('🔴')):
+                    name = text.replace('🟢', '').replace('🟠', '').replace('🔴', '').strip()
+                    # On filtre pour ne pas prendre de phrases trop longues ou de doublons
+                    if name and name not in seen and len(name) < 40:
+                        seen.add(name)
+                        # On cherche la date dans le même bloc ou le bloc précédent
+                        # Souvent la date est dans un col-md-2 juste avant
+                        date = datetime.now().strftime("%d %B %Y")
+                        prev_tag = tag.find_previous(['div', 'span', 'td'], class_='col-md-2')
+                        if prev_tag:
+                            date = prev_tag.get_text().strip()
+                        
+                        leaks.append({
+                            "source": name,
+                            "date": date,
+                            "description": "Nouvelle fuite de données répertoriée."
+                        })
                 if len(leaks) >= 3: break
             
             print(f"Trouvé {len(leaks)} fuites.")
@@ -55,21 +54,35 @@ def update_veille():
         response = requests.get('https://opensourceprojects.cc/', headers=headers, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, 'html.parser')
-            # On cherche les titres de projets
-            projects = soup.find_all(['h3', 'h4', 'a'], class_=['project-title', 'name'])[:3]
+            # On cherche les projets dans la section "Trending"
+            # Les noms de projets sont souvent dans des h3 ou des liens forts
+            for trending_item in soup.select('div.trending-item, .project-card')[:3]:
+                name_tag = trending_item.find(['h3', 'h4', 'a'])
+                if name_tag:
+                    name = name_tag.get_text().strip().split('🦔')[0].strip() # Nettoyage si icône accolée
+                    cat_tag = trending_item.find(['span', 'div'], class_='category')
+                    cat = cat_tag.get_text().strip() if cat_tag else "Software"
+                    desc_tag = trending_item.find('p')
+                    desc = desc_tag.get_text().strip() if desc_tag else "Projet open-source en tendance."
+                    
+                    if name and len(name) < 40:
+                        opensource.append({
+                            "name": name,
+                            "category": cat,
+                            "description": desc[:100] + "..." if len(desc) > 100 else desc
+                        })
             
-            if not projects:
-                # Fallback sur les liens dans les sections trending
-                projects = soup.select('h3')[:3]
-
-            for proj in projects:
-                name = proj.get_text().strip()
-                if name and len(name) < 40:
-                    opensource.append({
-                        "name": name,
-                        "category": "Open Source",
-                        "description": "Projet en tendance sur la plateforme."
-                    })
+            # Fallback si les sélecteurs CSS ont échoué
+            if not opensource:
+                for h3 in soup.find_all('h3')[:3]:
+                    name = h3.get_text().strip().split('🦔')[0].strip()
+                    if name and len(name) < 30:
+                        opensource.append({
+                            "name": name,
+                            "category": "Open Source",
+                            "description": "Projet en tendance sur la plateforme."
+                        })
+            
             print(f"Trouvé {len(opensource)} projets.")
     except Exception as e:
         print(f"Erreur OpenSourceProjects: {e}")
