@@ -32,10 +32,15 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # On récupère les dernières modifs distantes avant de tenter quoi que ce soit
+          git pull origin main
+          
           git add data/veille.json
+          
           if git commit -m "chore: update veille technologique data [skip ci]"; then
-            git pull --rebase origin main
-            git push origin main
+            # Si conflit lors du push, on privilégie TOUJOURS la version générée par le robot
+            git push origin main || (git pull --rebase -X theirs origin main && git push origin main)
           else
             echo "Nothing to commit"
           fi
