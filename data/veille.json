@@ -18,17 +18,17 @@
   ],
   "opensource": [
     {
+      "name": "Explore",
+      "category": "Open Source",
+      "description": "Projet en tendance sur la plateforme."
+    },
+    {
+      "name": "Legal",
+      "category": "Open Source",
+      "description": "Projet en tendance sur la plateforme."
+    },
+    {
       "name": "🚀 Just Launched",
-      "category": "Open Source",
-      "description": "Projet en tendance sur la plateforme."
-    },
-    {
-      "name": "joomla-cms",
-      "category": "Open Source",
-      "description": "Projet en tendance sur la plateforme."
-    },
-    {
-      "name": "tagspaces",
       "category": "Open Source",
       "description": "Projet en tendance sur la plateforme."
     }
