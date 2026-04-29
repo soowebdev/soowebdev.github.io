@@ -1,19 +1,19 @@
 {
   "leaks": [
     {
+      "source": "Métropole de Saint-Étienne",
+      "date": "29 avril 2026",
+      "description": "Données : Source"
+    },
+    {
+      "source": "Métropole de Bordeaux",
+      "date": "29 avril 2026",
+      "description": "Nom, prénomAdresse emailAdresse postaleNuméro de téléphoneNuméro d’enregistrementDate de déclaration..."
+    },
+    {
       "source": "Acrimed",
       "date": "28 avril 2026",
       "description": "Adresse emailMot de passe chiffré (🤷)Commandes passées"
-    },
-    {
-      "source": "Agence de Services et de Paiement",
-      "date": "27 avril 2026",
-      "description": "Nom, prénomNuméro de sécurité socialeAdresse postaleAvis de paiementIBAN"
-    },
-    {
-      "source": "Système U",
-      "date": "24 avril 2026",
-      "description": "Nom, prénomStatus professionelAdresse emailAdresse postaleNuméro de téléphoneNuméro de la carte de f..."
     }
   ],
   "opensource": [
