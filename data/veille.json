@@ -1,6 +1,11 @@
 {
   "leaks": [
     {
+      "source": "EduConnect",
+      "date": "7 mai 2026",
+      "description": "Nom, prénomIdentifiant ÉduConnectÉtablissement, classeAdresse emailCode d’activation"
+    },
+    {
       "source": "Fédération Française de Basketball",
       "date": "3 mai 2026",
       "description": "Nom, prénomDate de naissanceAdresse postaleAdresse électroniqueNuméro de téléphoneNuméro de licenceC..."
@@ -9,11 +14,6 @@
       "source": "Interrail",
       "date": "3 mai 2026",
       "description": "Nome, prénomAdresse emailAdresse postaleNuméro de téléphoneNuméro de passport, date de délivrance, d..."
-    },
-    {
-      "source": "Umanens",
-      "date": "30 avril 2026",
-      "description": "Nom, prénomAdresse postaleAdresse emailNuméro de téléphoneDate et lieu de naissanceComposition famil..."
     }
   ],
   "opensource": [
