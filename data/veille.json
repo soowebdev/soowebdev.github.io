@@ -1,6 +1,11 @@
 {
   "leaks": [
     {
+      "source": "La France Insoumise",
+      "date": "9 mai 2026",
+      "description": "Nom, prénomAdresse emailAdresse postaleInformation de profilParticipations à groupes ou évènements"
+    },
+    {
       "source": "Bouygues Telecom",
       "date": "8 mai 2026",
       "description": "Nom, prénomAdresse postaleAdresse emailNuméro de téléphoneDate de naissance"
@@ -9,11 +14,6 @@
       "source": "Arsène Valentin",
       "date": "8 mai 2026",
       "description": "Nom, prénomAdresse emailAdresse postaleNuméro de téléphoneDate de naissanceHistorique des commandes"
-    },
-    {
-      "source": "Bilov",
-      "date": "7 mai 2026",
-      "description": "Données : Source"
     }
   ],
   "opensource": [
