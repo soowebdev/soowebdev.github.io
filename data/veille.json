@@ -6,14 +6,14 @@
       "description": "Nom, prénomAdresse emailNuméro de téléphone"
     },
     {
+      "source": "Ville de Roubaix",
+      "date": "9 mai 2026",
+      "description": "Nom, prénomSituation familialeÉcole de rattachement"
+    },
+    {
       "source": "La France Insoumise",
       "date": "9 mai 2026",
       "description": "Nom, prénomAdresse emailAdresse postaleInformation de profilParticipations à groupes ou évènements"
-    },
-    {
-      "source": "Bouygues Telecom",
-      "date": "8 mai 2026",
-      "description": "Nom, prénomAdresse postaleAdresse emailNuméro de téléphoneDate de naissance"
     }
   ],
   "opensource": [
