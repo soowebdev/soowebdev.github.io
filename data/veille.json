@@ -1,6 +1,11 @@
 {
   "leaks": [
     {
+      "source": "Enercoop",
+      "date": "11 mai 2026",
+      "description": "Envoi frauduleux d’email"
+    },
+    {
       "source": "Once for all",
       "date": "11 mai 2026",
       "description": "Nom, prénomAdresse emailNuméro de téléphone"
@@ -9,11 +14,6 @@
       "source": "Ville de Roubaix",
       "date": "9 mai 2026",
       "description": "Nom, prénomSituation familialeÉcole de rattachement"
-    },
-    {
-      "source": "La France Insoumise",
-      "date": "9 mai 2026",
-      "description": "Nom, prénomAdresse emailAdresse postaleInformation de profilParticipations à groupes ou évènements"
     }
   ],
   "opensource": [
