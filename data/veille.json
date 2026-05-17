@@ -1,19 +1,19 @@
 {
   "leaks": [
     {
-      "source": "Enercoop",
-      "date": "11 mai 2026",
-      "description": "Envoi frauduleux d’email"
+      "source": "Jeu Jouet",
+      "date": "17 Avril 2026",
+      "description": "Fuite confirmée impactant les données clients."
     },
     {
-      "source": "Once for all",
-      "date": "11 mai 2026",
-      "description": "Nom, prénomAdresse emailNuméro de téléphone"
+      "source": "Brit Hotel",
+      "date": "17 Avril 2026",
+      "description": "Noms, emails, téléphones et réservations exposés."
     },
     {
-      "source": "Ville de Roubaix",
-      "date": "9 mai 2026",
-      "description": "Nom, prénomSituation familialeÉcole de rattachement"
+      "source": "Police Nationale",
+      "date": "16 Avril 2026",
+      "description": "170 000 agents concernés via e-Campus."
     }
   ],
   "opensource": [
