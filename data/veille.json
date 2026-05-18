@@ -1,6 +1,11 @@
 {
   "leaks": [
     {
+      "source": "Gîtes de France",
+      "date": "18 mai 2026",
+      "description": "Nom, prénomAdresse postaleAdresse mailNuméro de téléphoneDate du séjourNombre de nuités"
+    },
+    {
       "source": "Enercoop",
       "date": "11 mai 2026",
       "description": "Envoi frauduleux d’email"
@@ -9,11 +14,6 @@
       "source": "Once for all",
       "date": "11 mai 2026",
       "description": "Nom, prénomAdresse emailNuméro de téléphone"
-    },
-    {
-      "source": "Ville de Roubaix",
-      "date": "9 mai 2026",
-      "description": "Nom, prénomSituation familialeÉcole de rattachement"
     }
   ],
   "opensource": [
