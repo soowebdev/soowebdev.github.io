@@ -1,6 +1,11 @@
 {
   "leaks": [
     {
+      "source": "Goodvest",
+      "date": "4 juin 2026",
+      "description": "Nom, prénomAdresse emailNuméro de téléphoneNombre de personnes composant le foyerÉléments relatifs à..."
+    },
+    {
       "source": "Sofinco",
       "date": "3 juin 2026",
       "description": "Numéro clientAdresse emailNuméro de téléphone"
@@ -9,11 +14,6 @@
       "source": "Alan",
       "date": "23 mai 2026",
       "description": "Nom, prénomdate de naissanceRang de naissanceNuméro de sécurité socialeNuméro de contratNom de l’ass..."
-    },
-    {
-      "source": "undefined Atol",
-      "date": "22 mai 2026",
-      "description": "5,9 Millions de clientsNom et PrénomDate de naissanceAdresse e-mailNuméro de téléphoneAdresse postal..."
     }
   ],
   "opensource": [
