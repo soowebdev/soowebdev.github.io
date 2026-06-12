@@ -1,19 +1,19 @@
 {
   "leaks": [
     {
-      "source": "Jeu Jouet",
-      "date": "17 Avril 2026",
-      "description": "Fuite confirmée impactant les données clients."
+      "source": "Goodvest",
+      "date": "4 juin 2026",
+      "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Brit Hotel",
-      "date": "17 Avril 2026",
-      "description": "Noms, emails, téléphones et réservations exposés."
+      "source": "Apivia",
+      "date": "3 juin 2026",
+      "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Police Nationale",
-      "date": "16 Avril 2026",
-      "description": "170 000 agents concernés via e-Campus."
+      "source": "Jimmy Fairly",
+      "date": "3 juin 2026",
+      "description": "Nouvelle fuite de données répertoriée."
     }
   ],
   "opensource": [
