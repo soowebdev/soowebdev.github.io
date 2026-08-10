@@ -1,18 +1,18 @@
 {
   "leaks": [
     {
+      "source": "Intermarché",
+      "date": "10 août 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
+      "source": "Steam",
+      "date": "10 août 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "Prelys Courtage",
       "date": "8 août 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "France Casse",
-      "date": "22 juillet 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Magasins U",
-      "date": "13 juillet 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
