@@ -1,18 +1,18 @@
 {
   "leaks": [
     {
-      "source": "Éducation Nationale",
+      "source": "Mutuelle Générale de Prévoyance",
       "date": "18 août 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "France VAE",
-      "date": "13 août 2026",
+      "source": "Direction générale des Finances publiques",
+      "date": "18 août 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Intermarché",
-      "date": "10 août 2026",
+      "source": "Éducation Nationale",
+      "date": "18 août 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
