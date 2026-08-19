@@ -1,17 +1,17 @@
 {
   "leaks": [
     {
+      "source": "Institut de recherche pour le développement",
+      "date": "19 août 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "Mutuelle Générale de Prévoyance",
       "date": "18 août 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
       "source": "Direction générale des Finances publiques",
-      "date": "18 août 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Éducation Nationale",
       "date": "18 août 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
