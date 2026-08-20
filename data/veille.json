@@ -1,18 +1,18 @@
 {
   "leaks": [
     {
+      "source": "Suez",
+      "date": "20 août 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
+      "source": "Alaxione",
+      "date": "20 août 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "Institut de recherche pour le développement",
       "date": "19 août 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Mutuelle Générale de Prévoyance",
-      "date": "18 août 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Direction générale des Finances publiques",
-      "date": "18 août 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
