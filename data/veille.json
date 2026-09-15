@@ -1,6 +1,11 @@
 {
   "leaks": [
     {
+      "source": "Point Vision",
+      "date": "15 septembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "Nature et découvertes",
       "date": "14 septembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
@@ -8,11 +13,6 @@
     {
       "source": "Bouteilles et bocaux",
       "date": "14 septembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "NaturaBuy",
-      "date": "13 septembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
