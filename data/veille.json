@@ -1,6 +1,11 @@
 {
   "leaks": [
     {
+      "source": "Vélo Grimpe",
+      "date": "16 octobre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "Climb Up",
       "date": "15 octobre 2026",
       "description": "Nouvelle fuite de données répertoriée."
@@ -8,11 +13,6 @@
     {
       "source": "École 42",
       "date": "10 octobre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "ASOS",
-      "date": "9 octobre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
