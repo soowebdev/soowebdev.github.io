@@ -1,18 +1,18 @@
 {
   "leaks": [
     {
+      "source": "La Companie des Sens",
+      "date": "23 octobre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
+      "source": "Tailleur Auto",
+      "date": "23 octobre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "Fédération Française de Tir",
       "date": "22 octobre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Printerpix",
-      "date": "22 octobre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Solutions30",
-      "date": "21 octobre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
