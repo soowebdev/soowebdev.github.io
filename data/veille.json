@@ -1,17 +1,17 @@
 {
   "leaks": [
     {
+      "source": "Engie",
+      "date": "23 octobre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "La Compagnie des Sens",
       "date": "23 octobre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
       "source": "Point Vision",
-      "date": "23 octobre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Tailleur Auto",
       "date": "23 octobre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
