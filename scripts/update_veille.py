@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 def update_veille():
     # Simulation d'un vrai navigateur pour éviter d'être bloqué (CORS/User-Agent)
@@ -60,45 +60,29 @@ def update_veille():
     except Exception as e:
         print(f"Erreur BonjourLaFuite: {e}")
 
-    # 2. Ajouter les projets tendants depuis OpenSourceProjects
-    opensource = []
+    # 2. Dépôts GitHub créés cette semaine qui gagnent le plus d'étoiles
+    repos = []
     try:
-        print("Scraping OpenSourceProjects...")
-        response = requests.get('https://opensourceprojects.cc/', headers=headers, timeout=10)
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            # On cherche les projets dans la section "Trending"
-            # Les noms de projets sont souvent dans des h3 ou des liens forts
-            for trending_item in soup.select('div.trending-item, .project-card')[:3]:
-                name_tag = trending_item.find(['h3', 'h4', 'a'])
-                if name_tag:
-                    name = name_tag.get_text().strip().split('🦔')[0].strip() # Nettoyage si icône accolée
-                    cat_tag = trending_item.find(['span', 'div'], class_='category')
-                    cat = cat_tag.get_text().strip() if cat_tag else "Software"
-                    desc_tag = trending_item.find('p')
-                    desc = desc_tag.get_text().strip() if desc_tag else "Projet open-source en tendance."
-                    
-                    if name and len(name) < 40:
-                        opensource.append({
-                            "name": name,
-                            "category": cat,
-                            "description": desc[:100] + "..." if len(desc) > 100 else desc
-                        })
-            
-            # Fallback si les sélecteurs CSS ont échoué
-            if not opensource:
-                for h3 in soup.find_all('h3')[:3]:
-                    name = h3.get_text().strip().split('🦔')[0].strip()
-                    if name and len(name) < 30:
-                        opensource.append({
-                            "name": name,
-                            "category": "Open Source",
-                            "description": "Projet en tendance sur la plateforme."
-                        })
-            
-            print(f"Trouvé {len(opensource)} projets.")
+        print("Recherche des dépôts en hausse sur GitHub...")
+        since = (datetime.now(timezone.utc) - timedelta(days=7)).strftime('%Y-%m-%d')
+        api_headers = {'Accept': 'application/vnd.github+json'}
+        if os.environ.get('GITHUB_TOKEN'):
+            api_headers['Authorization'] = f"Bearer {os.environ['GITHUB_TOKEN']}"
+        response = requests.get(
+            'https://api.github.com/search/repositories',
+            params={'q': f'created:>{since}', 'sort': 'stars', 'order': 'desc', 'per_page': 3},
+            headers=api_headers, timeout=10)
+        response.raise_for_status()
+        for repo in response.json().get('items', []):
+            desc = repo.get('description') or "Pas de description."
+            repos.append({
+                "name": repo['full_name'],
+                "url": repo['html_url'],
+                "description": desc[:100] + "..." if len(desc) > 100 else desc
+            })
+        print(f"Trouvé {len(repos)} dépôts.")
     except Exception as e:
-        print(f"Erreur OpenSourceProjects: {e}")
+        print(f"Erreur API GitHub: {e}")
 
     # Back-up au cas où la scraping échoue (Mis à jour avec les dernières fuites réelles)
     if not leaks:
@@ -107,15 +91,9 @@ def update_veille():
             {"source": "Brit Hotel", "date": "17 Avril 2026", "description": "Noms, emails, téléphones et réservations exposés."},
             {"source": "Police Nationale", "date": "16 Avril 2026", "description": "170 000 agents concernés via e-Campus."}
         ]
-    if not opensource:
-        opensource = [
-            {"name": "PostHog", "category": "Product Analytics", "description": "Plateforme d'analyse complète tout-en-un pour les développeurs."},
-            {"name": "Umami", "category": "Web Analytics", "description": "Alternative à Google Analytics axée sur la vie privée et sans cookies."},
-            {"name": "Plane", "category": "Project Management", "description": "Gestion de projet moderne et open-source (Alternative à Jira)."}
-        ]
 
     # 3. Mise à jour du fichier JSON 
-    data = {"leaks": leaks, "opensource": opensource}
+    data = {"updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "leaks": leaks, "repos": repos}
     os.makedirs('data', exist_ok=True)
     with open('data/veille.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

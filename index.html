@@ -1,279 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - ctrlstack</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soheib Bouchenak, intégrateur web</title>
+  <meta name="description" content="Portfolio de Soheib Bouchenak, intégrateur web en formation au CNAM. Recherche un stage du 01 mars au 23 avril 2027.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen">
-    <header class="py-12 px-6 max-w-5xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="text-center md:text-left">
-                <h1 class="text-6xl font-extrabold gradient-text mb-2 tracking-tight">Soheib BOUCHENAK</h1>
-                <p class="text-2xl text-slate-400 font-medium">Développeur informatique en alternance</p>
-                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4 text-slate-500 text-sm">
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Villeneuve-la-Garenne (92) / Paris</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-envelope"></i> soheib.bouchenak@gmail.com</span>
-                    <span class="flex items-center gap-2"><i class="fa-solid fa-phone"></i> 06 51 13 51 51</span>
-                </div>
-            </div>
-            <div class="flex gap-4 mt-8 md:mt-0">
-                <a href="https://www.root-me.org/ctrlstack?lang=fr" target="_blank" title="Root-Me" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-sky-500 transition-all text-xl shadow-lg border border-slate-700">
-                    <i class="fa-solid fa-flag"></i>
-                </a>
-                <a href="CV_SB.pdf" download="CV_Soheib_BOUCHENAK.pdf" title="Voir CV" class="px-6 h-12 rounded-full bg-gradient-to-r from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold hover:scale-105 transition-all shadow-lg">
-                    <i class="fa-solid fa-file-pdf mr-2"></i> Mon CV
-                </a>
-            </div>
+<body>
+  <a class="skip" href="#projets">Aller aux projets</a>
+
+  <header class="intro">
+    <div class="inspect" id="inspect">
+      <span class="layer margin">
+        <span class="layer padding">
+          <span class="layer content">
+            <h1>Soheib Bouchenak</h1>
+          </span>
+        </span>
+      </span>
+      <span class="tooltip" aria-hidden="true"><b>h1</b><span id="dims"></span></span>
+    </div>
+
+    <p class="role">Intégrateur web</p>
+
+    <ul class="facts">
+      <li>92390 Villeneuve-la-Garenne</li>
+      <li>Stage du 01 mars au 23 avril 2027</li>
+      <li>Formation au CNAM Paris</li>
+    </ul>
+
+    <p class="pitch">
+      J'intègre des interfaces en HTML, CSS et JavaScript, propres sur mobile comme sur grand écran.
+      En ce moment, je construis avec un ami l'interface d'Orbit, un navigateur basé sur Firefox.
+      Je cherche un stage de huit semaines pour travailler sur des projets clients en équipe.
+    </p>
+
+    <nav class="links" aria-label="Liens">
+      <a class="primary" href="BOUCHENAK_Soheib_CV.pdf" download>Télécharger mon CV (PDF)</a>
+      <a href="https://github.com/soowebdev">GitHub</a>
+      <a href="mailto:soheib.bouchenak@gmail.com">soheib.bouchenak@gmail.com</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projets" aria-labelledby="projets-titre">
+      <h2 id="projets-titre">Projets</h2>
+
+      <article class="project">
+        <header>
+          <h3>Orbit, un navigateur construit à deux</h3>
+          <p class="meta">Depuis octobre 2026, projet personnel en binôme. Mon rôle : l'interface et le CSS.</p>
+        </header>
+        <dl class="star">
+          <dt>Situation</dt>
+          <dd>Depuis octobre 2026, je développe avec un ami Orbit, un navigateur basé sur Gecko, le moteur de Firefox.</dd>
+          <dt>Tâche</dt>
+          <dd>Rendre l'interface calme et lisible : une barre latérale verticale et des espaces d'onglets reconnaissables au premier coup d'œil.</dd>
+          <dt>Action</dt>
+          <dd>
+            <ul>
+              <li>Intégrer en CSS la barre latérale, les onglets épinglés en tuiles et les espaces colorés.</li>
+              <li>Animer en CSS le dégradé de la fenêtre quand on change d'espace.</li>
+              <li>Utiliser les icônes SVG de Lucide pour garder un style cohérent.</li>
+              <li>Tester chaque modification avec <code>npm run dev</code>, qui charge l'interface dans Firefox sans recompiler le navigateur.</li>
+              <li>Partager mon travail avec mon binôme sur GitHub.</li>
+            </ul>
+          </dd>
+          <dt>Résultat</dt>
+          <dd>Orbit est publié en version 158.0.10 pour Windows et se met à jour automatiquement sur les postes où il est installé.</dd>
+          <dt>Preuve</dt>
+          <dd><a href="https://github.com/realshavkat/orbit">Dépôt GitHub d'Orbit</a></dd>
+        </dl>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>Ce portfolio, avec une veille qui se met à jour seule</h3>
+          <p class="meta">Avril 2026, refait en octobre 2026. Projet personnel.</p>
+        </header>
+        <dl class="star">
+          <dt>Situation</dt>
+          <dd>En avril 2026, pendant ma formation au CNAM, j'ai créé mon portfolio pour me présenter aux recruteurs.</dd>
+          <dt>Tâche</dt>
+          <dd>Afficher une veille technologique à jour sans modifier le site à la main.</dd>
+          <dt>Action</dt>
+          <dd>
+            <ul>
+              <li>Intégrer la page en HTML et CSS sans framework, d'abord sur mobile.</li>
+              <li>Écrire un script Python qui récupère les dernières fuites de données et les dépôts GitHub en hausse.</li>
+              <li>Programmer GitHub Actions pour lancer ce script toutes les six heures et enregistrer le résultat.</li>
+              <li>Afficher les données en JavaScript à partir du fichier JSON.</li>
+              <li>Publier le site avec GitHub Pages.</li>
+            </ul>
+          </dd>
+          <dt>Résultat</dt>
+          <dd>Le site est en ligne et la veille ci-dessous est mise à jour automatiquement plusieurs fois par jour.</dd>
+          <dt>Preuve</dt>
+          <dd><a href="https://github.com/soowebdev/soowebdev.github.io">Code source</a> et <a href="https://github.com/soowebdev/soowebdev.github.io/actions">historique des mises à jour</a></dd>
+        </dl>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>Comprendre le code côté navigateur avec Root-Me</h3>
+          <p class="meta">Depuis 2025, entraînement personnel.</p>
+        </header>
+        <dl class="star">
+          <dt>Situation</dt>
+          <dd>Depuis 2025, je m'entraîne sur Root-Me, en dehors des cours, pour comprendre ce qui se passe dans le navigateur.</dd>
+          <dt>Tâche</dt>
+          <dd>Trouver comment une page vérifie un mot de passe en JavaScript, et pourquoi ce contrôle n'est pas fiable.</dd>
+          <dt>Action</dt>
+          <dd>
+            <ul>
+              <li>Lire le code HTML et JavaScript avec les DevTools du navigateur.</li>
+              <li>Analyser les requêtes HTTP avec l'onglet Réseau et Burp Suite.</li>
+            </ul>
+          </dd>
+          <dt>Résultat</dt>
+          <dd>29 challenges validés, dont 8 en Web Client. J'ai aussi validé 19 épreuves du FCSC 2025, le challenge de l'ANSSI.</dd>
+          <dt>Preuve</dt>
+          <dd><a href="https://www.root-me.org/ctrlstack?lang=fr">Mon profil Root-Me</a></dd>
+        </dl>
+      </article>
+    </section>
+
+    <section aria-labelledby="competences-titre">
+      <h2 id="competences-titre">Compétences</h2>
+      <div class="skills">
+        <div>
+          <h3>Intégration</h3>
+          <p>HTML, CSS, Tailwind CSS, JavaScript, responsive, DevTools</p>
         </div>
-        
-    </header>
+        <div>
+          <h3>Outils</h3>
+          <p>Git, GitHub, GitHub Actions, GitHub Pages, VS Code, npm</p>
+        </div>
+        <div>
+          <h3>Systèmes</h3>
+          <p>Linux et Bash, Python (bases), Windows, VirtualBox, WSL</p>
+        </div>
+        <div>
+          <h3>Sécurité web</h3>
+          <p>Requêtes HTTP, Burp Suite, OSINT</p>
+        </div>
+      </div>
+    </section>
 
-    <main class="max-w-5xl mx-auto px-6 py-8">
-        <section id="about" class="mb-16">
-            <div class="card p-8 rounded-2xl border-none bg-gradient-to-br from-slate-800/50 to-slate-900/50">
-                <h2 class="text-2xl font-bold mb-4 text-sky-400 italic font-mono">&lt;about-me /&gt;</h2>
-                <p class="text-lg text-slate-300 leading-relaxed">
-                    Je poursuis une formation en informatique avec l'ambition d'intégrer le monde professionnel via une <span class="text-white font-bold">alternance</span> pour acquérir une expérience concrète. Je propose une forte motivation, une capacité d'adaptation et une grande rigueur pour soutenir les équipes de développement et monter en compétences sur des technologies demandées.
-                </p>
-            </div>
-        </section>
+    <section aria-labelledby="parcours-titre">
+      <h2 id="parcours-titre">Parcours</h2>
+      <ol class="timeline" reversed>
+        <li>
+          <span class="when">Depuis octobre 2025</span>
+          <span class="what">Formation au CNAM, Paris</span>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <span class="what">Baccalauréat STMG, lycée Michel-Ange, Villeneuve-la-Garenne</span>
+        </li>
+        <li>
+          <span class="when">Déc. 2023 à janv. 2024</span>
+          <span class="what">Stage en maintenance réseau chez Altarea : diagnostics réseau et aide aux utilisateurs</span>
+        </li>
+        <li>
+          <span class="when">Déc. 2021 à janv. 2022</span>
+          <span class="what">Stage de veille OSINT dans une grande entreprise du e-commerce</span>
+        </li>
+      </ol>
+      <p class="langs">Espagnol B2, anglais B1.</p>
+    </section>
 
-        <section id="education-experience" class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-graduation-cap text-sky-400"></i>
-                    Diplômes et Formations
-                </h2>
-                <div class="space-y-6">
-                    <div class="border-l-2 border-slate-700 pl-4">
-                        <h3 class="font-bold text-lg text-slate-100">CNAM - DSP DevOps</h3>
-                        <p class="text-sky-400 text-sm">Paris - Depuis Octobre 2025</p>
-                        <p class="text-slate-400 text-xs mt-1">Conservatoire national des arts et métiers</p>
-                    </div>
-                    <div class="border-l-2 border-slate-700 pl-4">
-                        <h3 class="font-bold text-lg text-slate-100">Baccalauréat STMG</h3>
-                        <p class="text-sky-400 text-sm">Lycée Michel Ange - 2024 à 2025</p>
-                        <p class="text-slate-400 text-xs mt-1">Sciences et Technologies du Management et de la Gestion</p>
-                    </div>
-                    <div class="border-l-2 border-slate-700 pl-4">
-                        <h3 class="font-bold text-lg text-slate-100">Brevet des Collèges</h3>
-                        <p class="text-sky-400 text-sm">Edouard Manet - 2021 à 2022</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                    <i class="fa-solid fa-briefcase text-indigo-400"></i>
-                    Expériences professionnelles
-                </h2>
-                <div class="space-y-6">
-                    <div class="border-l-2 border-slate-700 pl-4">
-                        <h3 class="font-bold text-lg text-slate-100">Mission OSINT (Amazon)</h3>
-                        <p class="text-indigo-400 text-sm">Clichy - Déc 2021 à Jan 2022</p>
-                        <ul class="text-slate-400 text-xs mt-2 list-disc list-inside space-y-1">
-                            <li>Collecte et analyse de données ouvertes pour identifier des menaces.</li>
-                            <li>Rapports réguliers sur les tendances et les risques identifiés.</li>
-                            <li>Utilisation d'outils d'OSINT pour surveiller la marque Amazon.</li>
-                        </ul>
-                    </div>
-                    <div class="border-l-2 border-slate-700 pl-4">
-                        <h3 class="font-bold text-lg text-slate-100">Apprenti maintenance réseau (Altarea)</h3>
-                        <p class="text-indigo-400 text-sm">Villeneuve-la-Garenne - Déc 2023 à Jan 2024</p>
-                        <ul class="text-slate-400 text-xs mt-2 list-disc list-inside space-y-1">
-                            <li>Assistance à la maintenance du réseau informatique.</li>
-                            <li>Support technique de base auprès des utilisateurs.</li>
-                            <li>Réalisation de diagnostics réseau simples.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section aria-labelledby="veille-titre">
+      <h2 id="veille-titre">Veille</h2>
+      <p class="note" id="veille-maj">Mise à jour automatique toutes les six heures.</p>
+      <div class="veille">
+        <div>
+          <h3>Dernières fuites de données en France</h3>
+          <ul id="leaks" class="feed"><li class="empty">Chargement…</li></ul>
+          <p class="source">Source : <a href="https://bonjourlafuite.eu.org/">Bonjour la fuite</a></p>
+        </div>
+        <div>
+          <h3>Dépôts GitHub en hausse cette semaine</h3>
+          <ul id="repos" class="feed"><li class="empty">Chargement…</li></ul>
+          <p class="source">Source : API GitHub</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <section id="skills" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <i class="fa-solid fa-bolt text-yellow-400"></i>
-                Compétences
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="card p-6 rounded-xl">
-                    <h3 class="text-sky-400 font-bold mb-4 flex items-center gap-2"><i class="fa-brands fa-github"></i> Versioning</h3>
-                    <ul class="text-slate-300 text-sm space-y-2">
-                        <li>Git / GitHub (Bases)</li>
-                        <li>Gestion de dépôts</li>
-                        <li>Notions de commits / push</li>
-                    </ul>
-                </div>
-                <div class="card p-6 rounded-xl">
-                    <h3 class="text-emerald-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-user-secret"></i> Sécurité</h3>
-                    <ul class="text-slate-300 text-sm space-y-2">
-                        <li>Burp Suite (Bases)</li>
-                        <li>Analyse de requêtes HTTP</li>
-                        <li>Notions d'OSINT</li>
-                    </ul>
-                </div>
-                <div class="card p-6 rounded-xl">
-                    <h3 class="text-indigo-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-laptop-code"></i> Outils</h3>
-                    <ul class="text-slate-300 text-sm space-y-2">
-                        <li>Visual Studio Code</li>
-                        <li>Terminal Linux / Bash</li>
-                        <li>DevTools Navigateur</li>
-                    </ul>
-                </div>
-                <div class="card p-6 rounded-xl">
-                    <h3 class="text-rose-400 font-bold mb-4 flex items-center gap-2"><i class="fa-solid fa-network-wired"></i> Systèmes</h3>
-                    <ul class="text-slate-300 text-sm space-y-2">
-                        <li>Linux (Bases)</li>
-                        <li>Windows (Bases)</li>
-                        <li>Virtualisation (VirtualBox)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <footer class="outro">
+    <p>Vous recrutez un stagiaire du 01 mars au 23 avril 2027 ?</p>
+    <a class="primary" href="mailto:soheib.bouchenak@gmail.com">M'écrire un e-mail</a>
+    <p class="small">Site intégré à la main en HTML, CSS et JavaScript, sans framework.</p>
+  </footer>
 
-        <section id="others" class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <h2 class="text-2xl font-bold mb-6 text-rose-400 flex items-center gap-3">
-                    <i class="fa-solid fa-language"></i> Langues
-                </h2>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center bg-slate-800/50 p-4 rounded-lg">
-                        <span class="font-bold text-slate-100">Espagnol</span>
-                        <span class="text-rose-400 text-sm font-medium">B2 : Compétence pro</span>
-                    </div>
-                    <div class="flex justify-between items-center bg-slate-800/50 p-4 rounded-lg">
-                        <span class="font-bold text-slate-100">Anglais</span>
-                        <span class="text-rose-400 text-sm font-medium">B1 : Vocabulaire quotidien</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h2 class="text-2xl font-bold mb-6 text-emerald-400 flex items-center gap-3">
-                    <i class="fa-solid fa-heart"></i> Centres d'intérêt
-                </h2>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700 text-slate-300 text-sm">Informatique / Veille</span>
-                    <span class="px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700 text-slate-300 text-sm">Musculation</span>
-                    <span class="px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700 text-slate-300 text-sm">Exploration Tech</span>
-                    <span class="px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700 text-slate-300 text-sm">OSINT</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="veille" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <i class="fa-solid fa-satellite-dish text-sky-400 animate-pulse"></i>
-                Veille Technologique
-                <span class="text-[10px] px-2 py-0.5 bg-rose-500/20 text-rose-400 rounded-full border border-rose-500/30 animate-pulse ml-2 flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 bg-rose-500 rounded-full"></span> LIVE
-                </span>
-            </h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Data Leaks Column -->
-                <div class="card p-8 rounded-3xl border-rose-500/10 bg-gradient-to-br from-slate-800/40 to-rose-900/10">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-xl font-bold text-rose-400 flex items-center gap-2">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                            Dernières Fuites
-                        </h3>
-                        <a href="https://bonjourlafuite.eu.org/" target="_blank" class="text-xs text-slate-500 hover:text-rose-400 transition-colors underline">Source: bonjourlafuite</a>
-                    </div>
-                    <div id="leaks-content" class="space-y-4">
-                        <!-- Content will be loaded dynamically -->
-                        <p class="text-slate-400 italic text-xs">Chargement des dernières fuites...</p>
-                    </div>
-                </div>
-
-                <!-- Open Source Column -->
-                <div class="card p-8 rounded-3xl border-emerald-500/10 bg-gradient-to-br from-slate-800/40 to-emerald-900/10">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2">
-                            <i class="fa-solid fa-heart-pulse"></i>
-                            Trending Open Source
-                        </h3>
-                        <a href="https://opensourceprojects.cc/" target="_blank" class="text-xs text-slate-500 hover:text-emerald-400 transition-colors underline">Source: opensourceprojects</a>
-                    </div>
-                    <div id="opensource-content" class="space-y-4">
-                        <!-- Content will be loaded dynamically -->
-                        <p class="text-slate-400 italic text-xs">Chargement des projets open source...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="root-me" class="mb-16">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <i class="fa-solid fa-skull-crossbones text-sky-400"></i>
-                Root-Me Achievements
-            </h2>
-            <div id="root-me-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Loading state -->
-                <p class="text-slate-400 italic">Chargement des données Root-Me...</p>
-            </div>
-        </section>
-
-        <section id="fcsc" class="mb-24">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <i class="fa-solid fa-shield-halved text-indigo-400"></i>
-                FCSC 2025 - Forensic Series
-            </h2>
-            <div id="fcsc-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Loading state -->
-                <p class="text-slate-400 italic">Chargement des données FCSC...</p>
-            </div>
-        </section>
-
-        <section id="contact-download" class="mb-16">
-            <div class="card p-10 rounded-3xl text-center bg-gradient-to-br from-slate-800/80 to-indigo-900/40 border-indigo-500/20 shadow-2xl">
-                <h2 class="text-4xl font-extrabold mb-4 gradient-text">Intéressé par mon profil ?</h2>
-                <p class="text-slate-400 mb-8 max-w-2xl mx-auto text-lg">
-                    Je suis à la recherche d'une <span class="text-white font-bold">alternance</span> pour mon cursus DSP DevOps. 
-                    N'hésitez pas à télécharger ma version PDF ou à me contacter directement.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="CV_SB.pdf" download="CV_Soheib_BOUCHENAK.pdf" class="px-8 py-4 rounded-2xl bg-white text-slate-900 font-bold hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-lg">
-                        <i class="fa-solid fa-file-pdf text-xl text-rose-600"></i>
-                        Télécharger le CV (PDF)
-                    </a>
-                    <a href="mailto:soheib.bouchenak@gmail.com" class="px-8 py-4 rounded-2xl bg-sky-500 text-white font-bold hover:bg-sky-400 hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-lg shadow-sky-500/20">
-                        <i class="fa-solid fa-paper-plane text-xl"></i>
-                        Me contacter par mail
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-12 border-t border-slate-800 text-center text-slate-500">
-        <p>&copy; 2026 ctrlstack. Fait avec passion.</p>
-    </footer>
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
