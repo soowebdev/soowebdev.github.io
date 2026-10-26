@@ -4,42 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BOUCHENAK Soheib, CV intégrateur web</title>
+  <meta name="author" content="Soheib Bouchenak">
+  <meta name="keywords" content="intégrateur web, stage, HTML, CSS, JavaScript, responsive, mobile-first, Git, GitHub, Tailwind CSS, accessibilité">
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
     @page { size: A4; margin: 0; }
-    :root { --ink: #1c2026; --muted: #5e6773; --rule: #e3e6ea; --link: #1f5bd1;
+    :root { --ink: #1c2026; --muted: #5a636e; --rule: #e1e5ea; --link: #1f5bd1;
       --margin: #fbe3c8; --padding: #dcead1; --content: #d4e5f4; }
     * { box-sizing: border-box; }
     body { margin: 0; color: var(--ink); background: #fff;
-      font: 400 9.4pt/1.45 "Schibsted Grotesk", system-ui, sans-serif; }
-    .page { width: 210mm; height: 297mm; padding: 14mm 15mm 12mm; margin: 0 auto;
-      display: flex; flex-wrap: wrap; column-gap: 10mm; align-content: flex-start; }
-    main { flex: 1; min-width: 0; }
-    .side { width: 58mm; }
+      font: 400 9.2pt/1.42 "Schibsted Grotesk", system-ui, sans-serif; }
+    .page { width: 210mm; min-height: 297mm; padding: 13mm 17mm 11mm; margin: 0 auto; }
     a { color: var(--link); text-decoration: none; }
-    h2 { margin: 0 0 2.2mm; font-size: 11pt; font-weight: 800; letter-spacing: -0.01em;
-      padding-bottom: 1.2mm; border-bottom: 1px solid var(--rule); }
-    h3 { margin: 0; font-size: 9.6pt; font-weight: 700; }
     p { margin: 0; }
-    ul { margin: 1mm 0 0; padding-left: 4mm; }
-    li + li { margin-top: 0.6mm; }
-    section { margin-bottom: 6mm; }
+    strong { font-weight: 700; }
 
-    header { width: 100%; display: flex; justify-content: space-between;
-      gap: 8mm; align-items: flex-start; margin-bottom: 8mm; }
-    .name { display: inline-block; background: var(--margin); padding: 2.2mm; margin-left: -4.4mm; }
-    .name span { display: block; background: var(--padding); padding: 2.2mm; }
-    .name h1 { margin: 0; background: var(--content); font-size: 27pt; font-weight: 800;
-      line-height: 1; letter-spacing: -0.03em; }
-    .role { margin-top: 4mm; font-size: 15pt; font-weight: 500; }
-    .stage { margin-top: 1mm; font-weight: 700; }
-    .pitch { margin-top: 3mm; max-width: 120mm; }
-    header img { width: 30mm; height: 30mm; object-fit: cover; border-radius: 50%; }
+    header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8mm;
+      padding-bottom: 5mm; border-bottom: 1px solid var(--rule); }
+    .name { display: inline-block; background: var(--margin); padding: 1.8mm; margin-left: -3.6mm; }
+    .name span { display: block; background: var(--padding); padding: 1.8mm; }
+    h1 { margin: 0; background: var(--content); font-size: 25pt; font-weight: 800; line-height: 1;
+      letter-spacing: -0.03em; }
+    .role { margin-top: 3mm; font-size: 14pt; font-weight: 700; }
+    .dispo { margin-top: 0.6mm; font-size: 10.5pt; }
+    .contact { margin-top: 2.6mm; display: flex; flex-wrap: wrap; gap: 0.6mm 5mm; color: var(--muted); }
+    header img { width: 27mm; height: 27mm; object-fit: cover; border-radius: 50%; flex: none; }
 
-    .entry + .entry { margin-top: 3.2mm; }
-    .when { color: var(--muted); }
-    .side p + p { margin-top: 1.4mm; }
-    .side .label { color: var(--muted); }
+    section { display: flex; gap: 6mm; padding: 3.2mm 0; border-bottom: 1px solid var(--rule); }
+    section:last-child { border-bottom: 0; }
+    h2 { flex: 0 0 27mm; margin: 0; font-size: 10.5pt; font-weight: 800; letter-spacing: -0.01em; }
+    .body { flex: 1; min-width: 0; }
+    h3 { margin: 0; font-size: 9.9pt; font-weight: 700; }
+    .line { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+    .when { color: var(--muted); white-space: nowrap; font-size: 9pt; }
+    .sub { color: var(--muted); }
+    .entry + .entry { margin-top: 2.8mm; }
+    ul { margin: 0.9mm 0 0; padding-left: 3.6mm; }
+    li + li { margin-top: 0.5mm; }
+    .skills p + p { margin-top: 0.9mm; }
+    .k { font-weight: 700; }
   </style>
 </head>
 <body>
@@ -47,114 +50,98 @@
     <header>
       <div>
         <div class="name"><span><h1>Soheib Bouchenak</h1></span></div>
-        <p class="role">Intégrateur web</p>
-        <p class="stage">Stage du 01 mars au 23 avril 2027</p>
-        <p class="pitch">En DSP Assistant intégrateur web au CNAM, j'intègre des interfaces en HTML, CSS et JavaScript.
-          Je construis en ce moment l'interface d'Orbit, un navigateur basé sur Firefox, avec un ami.</p>
+        <p class="role">Intégrateur web, en recherche de stage</p>
+        <p class="dispo">Disponible du <strong>01 mars au 23 avril 2027</strong>, à Paris et en Île-de-France</p>
+        <p class="contact">
+          <span>92390 Villeneuve-la-Garenne</span>
+          <span>06 51 13 51 51</span>
+          <a href="mailto:soheib.bouchenak@gmail.com">soheib.bouchenak@gmail.com</a>
+          <a href="https://soowebdev.github.io/">soowebdev.github.io</a>
+          <a href="https://github.com/soowebdev">github.com/soowebdev</a>
+        </p>
       </div>
-      <img src="photo.jpg" alt="">
+      <img src="photo.jpg" alt="Photo de Soheib Bouchenak">
     </header>
 
-    <main>
-      <section>
-        <h2>Projets</h2>
+    <section>
+      <h2>Profil</h2>
+      <div class="body">
+        <p>En DSP Assistant intégrateur web au CNAM, j'intègre des pages responsive en HTML, CSS et JavaScript
+          et je les publie avec Git. Je construis en ce moment l'interface d'Orbit, un navigateur basé sur Firefox.
+          Je cherche un stage de 8 semaines pour intégrer des sites au sein d'une équipe web.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projets</h2>
+      <div class="body">
         <div class="entry">
-          <h3>Orbit, navigateur web en binôme</h3>
-          <p class="when">Depuis octobre 2026</p>
+          <div class="line"><h3>Orbit, navigateur web basé sur Firefox</h3><span class="when">Depuis oct. 2026</span></div>
+          <p class="sub">Projet en binôme, rôle : interface et CSS, <a href="https://github.com/realshavkat/orbit">github.com/realshavkat/orbit</a></p>
           <ul>
-            <li>Intégration en CSS de la barre latérale, des onglets et des espaces colorés</li>
-            <li>Icônes SVG Lucide, tests avec npm run dev, partage du code sur GitHub</li>
-            <li>Version 158.0.10 publiée pour Windows, avec mises à jour automatiques</li>
+            <li>Intégré en <span class="k">CSS</span> la barre latérale verticale, les onglets épinglés et les espaces colorés</li>
+            <li>Animé le changement d'espace en CSS et harmonisé les icônes avec la bibliothèque <span class="k">SVG</span> Lucide</li>
+            <li>Testé chaque modification avec <span class="k">npm</span> sans recompiler Firefox : 9 versions publiées en 6 jours</li>
           </ul>
         </div>
         <div class="entry">
-          <h3>Portfolio avec veille automatisée</h3>
-          <p class="when">Avril 2026, refait en octobre 2026</p>
+          <div class="line"><h3>Portfolio avec veille automatisée</h3><span class="when">Avril 2026, refonte oct. 2026</span></div>
+          <p class="sub"><a href="https://soowebdev.github.io/">soowebdev.github.io</a></p>
           <ul>
-            <li>Page intégrée en HTML et CSS sans framework, d'abord pour mobile</li>
-            <li>Script Python lancé toutes les six heures par GitHub Actions</li>
-            <li>Site en ligne sur GitHub Pages : soowebdev.github.io</li>
+            <li>Intégré le site en <span class="k">HTML et CSS</span> sans framework, <span class="k">mobile-first</span>, utilisable au clavier</li>
+            <li>Automatisé la veille : script <span class="k">Python</span> lancé toutes les 6 h par <span class="k">GitHub Actions</span>, site sur GitHub Pages</li>
           </ul>
         </div>
         <div class="entry">
-          <h3>Entraînement Root-Me et FCSC 2025</h3>
-          <p class="when">Depuis 2025</p>
+          <div class="line"><h3>Root-Me et FCSC 2025</h3><span class="when">Depuis 2025</span></div>
           <ul>
-            <li>29 challenges Root-Me validés, dont 8 en Web Client (DevTools, requêtes HTTP)</li>
-            <li>19 épreuves validées au FCSC 2025, le challenge de l'ANSSI</li>
+            <li>Analysé le <span class="k">JavaScript</span> et les requêtes <span class="k">HTTP</span> de pages web avec les DevTools et Burp Suite</li>
+            <li>29 challenges Root-Me validés (325 points, dont 8 en Web Client) et 19 épreuves au FCSC 2025 de l'ANSSI</li>
           </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <h2>Formation</h2>
+    <section>
+      <h2>Compétences</h2>
+      <div class="body skills">
+        <p><span class="k">Intégration :</span> HTML5, CSS3, Tailwind CSS, JavaScript, responsive et mobile-first, accessibilité (bases)</p>
+        <p><span class="k">Au programme du DSP :</span> PHP en MVC, bases de données SQL, CMS, design numérique</p>
+        <p><span class="k">Outils :</span> Git, GitHub, GitHub Actions, GitHub Pages, VS Code, npm, DevTools</p>
+        <p><span class="k">Systèmes :</span> Linux et Bash, Python (bases), Windows, VirtualBox</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Expériences</h2>
+      <div class="body">
         <div class="entry">
-          <h3>DSP Assistant intégrateur web (Bac+1)</h3>
-          <p class="when">CNAM Paris, 2026-2027</p>
-          <p>HTML et CSS, JavaScript, PHP en MVC, bases de données, CMS, design numérique</p>
+          <div class="line"><h3>Stagiaire en maintenance réseau, Altarea</h3><span class="when">Déc. 2023 à janv. 2024</span></div>
+          <ul><li>Vérifié la connectivité, suivi les équipements, diagnostiqué des pannes simples et aidé les utilisateurs</li></ul>
         </div>
         <div class="entry">
-          <h3>Baccalauréat STMG</h3>
-          <p class="when">Lycée Michel-Ange, Villeneuve-la-Garenne, 2025</p>
+          <div class="line"><h3>Stagiaire en veille OSINT, grande entreprise du e-commerce</h3><span class="when">Déc. 2021 à janv. 2022</span></div>
+          <ul><li>Collecté et analysé des données publiques, rédigé des rapports réguliers sur les risques</li></ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <h2>Expériences</h2>
+    <section>
+      <h2>Formation</h2>
+      <div class="body">
         <div class="entry">
-          <h3>Stage en maintenance réseau, Altarea</h3>
-          <p class="when">Villeneuve-la-Garenne, décembre 2023 à janvier 2024</p>
-          <ul>
-            <li>Vérification de la connectivité et suivi des équipements</li>
-            <li>Diagnostic de pannes simples et aide aux utilisateurs</li>
-          </ul>
+          <div class="line"><h3>DSP Assistant intégrateur web (Bac+1, RNCP 37212), CNAM Paris</h3><span class="when">2026-2027</span></div>
         </div>
         <div class="entry">
-          <h3>Stage de veille OSINT, grande entreprise du e-commerce</h3>
-          <p class="when">Clichy, décembre 2021 à janvier 2022</p>
-          <ul>
-            <li>Collecte et analyse de données publiques, rapports réguliers sur les risques</li>
-          </ul>
+          <div class="line"><h3>Baccalauréat STMG, lycée Michel-Ange, Villeneuve-la-Garenne</h3><span class="when">2025</span></div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <aside class="side">
-      <section>
-        <h2>Contact</h2>
-        <p>92390 Villeneuve-la-Garenne</p>
-        <p>06 51 13 51 51</p>
-        <p><a href="mailto:soheib.bouchenak@gmail.com">soheib.bouchenak@gmail.com</a></p>
-        <p><span class="label">Portfolio</span><br><a href="https://soowebdev.github.io/">soowebdev.github.io</a></p>
-        <p><span class="label">GitHub</span><br><a href="https://github.com/soowebdev">github.com/soowebdev</a></p>
-        <!-- LinkedIn : ajouter ici linkedin.com/in/... une fois le profil créé -->
-      </section>
-
-      <section>
-        <h2>Compétences</h2>
-        <p><span class="label">Intégration</span><br>HTML, CSS, Tailwind CSS, JavaScript, responsive, DevTools</p>
-        <p><span class="label">Outils</span><br>Git, GitHub, GitHub Actions, GitHub Pages, VS Code, npm</p>
-        <p><span class="label">Systèmes</span><br>Linux et Bash, Python (bases), Windows, VirtualBox, WSL</p>
-        <p><span class="label">Sécurité web</span><br>Requêtes HTTP, Burp Suite, OSINT</p>
-      </section>
-
-      <section>
-        <h2>Langues</h2>
-        <p>Espagnol B2, compétence professionnelle</p>
-        <p>Anglais B1, vocabulaire du quotidien</p>
-      </section>
-
-      <section>
-        <h2>Centres d'intérêt</h2>
-        <p>Veille web et cybersécurité</p>
-        <p>Musculation, entraînement régulier</p>
-      </section>
-
-      <section>
-        <h2>Référence</h2>
-        <p>Cindy Longy, chargée d'orientation au CNAM</p>
-      </section>
-    </aside>
+    <section>
+      <h2>Langues et intérêts</h2>
+      <div class="body"><p>Espagnol B2 (professionnel), anglais B1. Veille web et cybersécurité, musculation.</p></div>
+    </section>
   </div>
 </body>
 </html>
