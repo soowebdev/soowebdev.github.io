@@ -28,7 +28,8 @@
     .role { margin-top: 3mm; font-size: 14pt; font-weight: 700; }
     .dispo { margin-top: 0.6mm; font-size: 10.5pt; }
     .contact { margin-top: 2.6mm; display: flex; flex-wrap: wrap; gap: 0.6mm 5mm; color: var(--muted); }
-    header img { width: 27mm; height: 27mm; object-fit: cover; border-radius: 50%; flex: none; }
+    .aside { display: flex; gap: 4mm; align-items: flex-start; flex: none; }
+    .photo { width: 27mm; height: 27mm; object-fit: cover; border-radius: 50%; }
 
     section { display: flex; gap: 6mm; padding: 3.2mm 0; border-bottom: 1px solid var(--rule); }
     section:last-child { border-bottom: 0; }
@@ -43,6 +44,9 @@
     li + li { margin-top: 0.5mm; }
     .skills p + p { margin-top: 0.9mm; }
     .k { font-weight: 700; }
+    .qr { flex: none; display: flex; flex-direction: column; align-items: center; gap: 1mm;
+      color: var(--muted); font-size: 7.6pt; }
+    .qr img { width: 19mm; height: 19mm; display: block; }
   </style>
 </head>
 <body>
@@ -60,7 +64,13 @@
           <a href="https://github.com/soowebdev">github.com/soowebdev</a>
         </p>
       </div>
-      <img src="photo.jpg" alt="Photo de Soheib Bouchenak">
+      <div class="aside">
+        <img class="photo" src="photo.jpg" alt="Photo de Soheib Bouchenak">
+        <a class="qr" href="https://soowebdev.github.io/">
+          <img src="qr-portfolio.svg" alt="QR code vers soowebdev.github.io">
+          <span>Portfolio</span>
+        </a>
+      </div>
     </header>
 
     <section>
