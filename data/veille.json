@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T06:40:20+00:00",
+  "updated": "2026-10-28T12:41:14+00:00",
   "leaks": [
     {
       "source": "Alliance Police Nationale",
@@ -29,9 +29,9 @@
       "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。"
     },
     {
-      "name": "designfuchen/word-atlas",
-      "url": "https://github.com/designfuchen/word-atlas",
-      "description": "词光 · Word Atlas — Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-s..."
+      "name": "unclebob/ub-mode",
+      "url": "https://github.com/unclebob/ub-mode",
+      "description": "Pas de description."
     }
   ]
 }
