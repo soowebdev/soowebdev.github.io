@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T12:42:21+00:00",
+  "updated": "2026-10-29T18:41:14+00:00",
   "leaks": [
     {
       "source": "CTS",
@@ -24,14 +24,14 @@
       "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。"
     },
     {
-      "name": "JustAResearcher/gpu-unlock-ada",
-      "url": "https://github.com/JustAResearcher/gpu-unlock-ada",
-      "description": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally"
-    },
-    {
       "name": "unclebob/ub-mode",
       "url": "https://github.com/unclebob/ub-mode",
       "description": "Pas de description."
+    },
+    {
+      "name": "JustAResearcher/gpu-unlock-ada",
+      "url": "https://github.com/JustAResearcher/gpu-unlock-ada",
+      "description": "GPU tensor unlock source for RTX 4090 and experimental RTX 4070 Ti SUPER; firmware generated locally"
     }
   ]
 }
