@@ -1,6 +1,11 @@
 {
-  "updated": "2026-10-30T12:42:33+00:00",
+  "updated": "2026-10-30T18:38:51+00:00",
   "leaks": [
+    {
+      "source": "La halle du sommeil",
+      "date": "30 octobre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "CTS",
       "date": "28 octobre 2026",
@@ -9,11 +14,6 @@
     {
       "source": "Bourse Direct",
       "date": "27 octobre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Alliance Police Nationale",
-      "date": "24 octobre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
