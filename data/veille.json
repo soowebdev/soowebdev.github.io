@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T00:41:46+00:00",
+  "updated": "2026-10-30T06:43:48+00:00",
   "leaks": [
     {
       "source": "CTS",
@@ -19,14 +19,14 @@
   ],
   "repos": [
     {
-      "name": "rddmwmddr/android-ad-cleaner",
-      "url": "https://github.com/rddmwmddr/android-ad-cleaner",
-      "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。"
-    },
-    {
       "name": "unclebob/ub-mode",
       "url": "https://github.com/unclebob/ub-mode",
       "description": "Pas de description."
+    },
+    {
+      "name": "rddmwmddr/android-ad-cleaner",
+      "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+      "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。"
     },
     {
       "name": "interplains/Zero-Breach-Toolkit",
