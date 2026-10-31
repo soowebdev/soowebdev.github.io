@@ -1,6 +1,11 @@
 {
-  "updated": "2026-10-30T18:38:51+00:00",
+  "updated": "2026-10-31T00:48:05+00:00",
   "leaks": [
+    {
+      "source": "Fédération Française de Montagne Escalade",
+      "date": "30 octobre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "La halle du sommeil",
       "date": "30 octobre 2026",
@@ -9,11 +14,6 @@
     {
       "source": "CTS",
       "date": "28 octobre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Bourse Direct",
-      "date": "27 octobre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
@@ -24,14 +24,14 @@
       "description": "Pas de description."
     },
     {
-      "name": "rddmwmddr/android-ad-cleaner",
-      "url": "https://github.com/rddmwmddr/android-ad-cleaner",
-      "description": "关掉国产安卓手机系统里的广告、热搜、资讯推荐和营销推送。不 root，可还原，支持 AI 智能体一键执行。"
-    },
-    {
       "name": "anhao/ai-pose-gallery-zh",
       "url": "https://github.com/anhao/ai-pose-gallery-zh",
       "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊"
+    },
+    {
+      "name": "interplains/Zero-Breach-Toolkit",
+      "url": "https://github.com/interplains/Zero-Breach-Toolkit",
+      "description": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and..."
     }
   ]
 }
