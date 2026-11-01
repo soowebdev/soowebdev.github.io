@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T18:33:50+00:00",
+  "updated": "2026-11-01T00:47:39+00:00",
   "leaks": [
     {
       "source": "Fédération Française de Montagne Escalade",
@@ -19,19 +19,19 @@
   ],
   "repos": [
     {
-      "name": "unclebob/ub-mode",
-      "url": "https://github.com/unclebob/ub-mode",
-      "description": "Pas de description."
-    },
-    {
       "name": "anhao/ai-pose-gallery-zh",
       "url": "https://github.com/anhao/ai-pose-gallery-zh",
       "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊"
     },
     {
-      "name": "interplains/Zero-Breach-Toolkit",
-      "url": "https://github.com/interplains/Zero-Breach-Toolkit",
-      "description": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and..."
+      "name": "heydamir/unslop",
+      "url": "https://github.com/heydamir/unslop",
+      "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface"
+    },
+    {
+      "name": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "description": "Mika — 你手机上的私人 AI 助理，替你操作 App、上网、把事办成。An on-device AI agent for Android that operates apps and the w..."
     }
   ]
 }
