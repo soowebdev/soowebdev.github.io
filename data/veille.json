@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T07:09:52+00:00",
+  "updated": "2026-11-02T12:53:58+00:00",
   "leaks": [
     {
       "source": "Fédération Française de Montagne Escalade",
@@ -24,14 +24,14 @@
       "description": "Towards a More Autonomous Agent System"
     },
     {
-      "name": "anhao/ai-pose-gallery-zh",
-      "url": "https://github.com/anhao/ai-pose-gallery-zh",
-      "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊"
-    },
-    {
       "name": "heydamir/unslop",
       "url": "https://github.com/heydamir/unslop",
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface"
+    },
+    {
+      "name": "anhao/ai-pose-gallery-zh",
+      "url": "https://github.com/anhao/ai-pose-gallery-zh",
+      "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊"
     }
   ]
 }
