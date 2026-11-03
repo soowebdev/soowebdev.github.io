@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T12:52:52+00:00",
+  "updated": "2026-11-03T18:42:38+00:00",
   "leaks": [
     {
       "source": "Fédération Française de Montagne Escalade",
@@ -24,14 +24,14 @@
       "description": "Towards a More Autonomous Agent System"
     },
     {
-      "name": "heydamir/unslop",
-      "url": "https://github.com/heydamir/unslop",
-      "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface"
-    },
-    {
       "name": "storytold/craft-anything",
       "url": "https://github.com/storytold/craft-anything",
       "description": "Craft Anything: understand how any software works, and craft your own."
+    },
+    {
+      "name": "heydamir/unslop",
+      "url": "https://github.com/heydamir/unslop",
+      "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface"
     }
   ]
 }
