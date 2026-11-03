@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T18:49:19+00:00",
+  "updated": "2026-11-03T00:49:18+00:00",
   "leaks": [
     {
       "source": "Fédération Française de Montagne Escalade",
@@ -29,9 +29,9 @@
       "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface"
     },
     {
-      "name": "anhao/ai-pose-gallery-zh",
-      "url": "https://github.com/anhao/ai-pose-gallery-zh",
-      "description": "中文版 AI 姿势参考图库 · 1439 组 / 2878 张图片 / 完整汉化 · 零依赖静态画廊"
+      "name": "wangzan101/Mika",
+      "url": "https://github.com/wangzan101/Mika",
+      "description": "An on-device AI agent for Android that operates apps and the web to get things done for you."
     }
   ]
 }
