@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T18:49:33+00:00",
+  "updated": "2026-11-05T00:51:54+00:00",
   "leaks": [
     {
       "source": "Fédération Française de Montagne Escalade",
@@ -29,9 +29,9 @@
       "description": "Craft Anything: understand how any software works, and craft your own."
     },
     {
-      "name": "heydamir/unslop",
-      "url": "https://github.com/heydamir/unslop",
-      "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface"
+      "name": "patch-gg/pixelfx",
+      "url": "https://github.com/patch-gg/pixelfx",
+      "description": "244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own."
     }
   ]
 }
