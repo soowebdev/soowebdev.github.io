@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-06T12:53:07+00:00",
+  "updated": "2026-11-06T18:45:07+00:00",
   "leaks": [
+    {
+      "source": "Delcampe",
+      "date": "6 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "Aqua Store",
       "date": "5 novembre 2026",
@@ -8,11 +13,6 @@
     },
     {
       "source": "Bureau Vallée",
-      "date": "5 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Grand Paris Grand Est",
       "date": "5 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
