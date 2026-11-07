@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T18:45:07+00:00",
+  "updated": "2026-11-07T00:49:16+00:00",
   "leaks": [
     {
       "source": "Delcampe",
@@ -19,19 +19,19 @@
   ],
   "repos": [
     {
-      "name": "deepseek-ai/dsh-superagent-prototype",
-      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
-      "description": "Towards a More Autonomous Agent System"
-    },
-    {
-      "name": "storytold/craft-anything",
-      "url": "https://github.com/storytold/craft-anything",
-      "description": "Craft Anything: understand how any software works, and craft your own."
-    },
-    {
       "name": "KKKKhazix/agent-autoloop",
       "url": "https://github.com/KKKKhazix/agent-autoloop",
       "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。"
+    },
+    {
+      "name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+      "url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+      "description": "Google_AI_Pro_2Year_ZeroCost_Auto"
+    },
+    {
+      "name": "govijr/terminal-mac",
+      "url": "https://github.com/govijr/terminal-mac",
+      "description": "Entire MacOS running in your terminal."
     }
   ]
 }
