@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T18:34:49+00:00",
+  "updated": "2026-11-08T00:48:56+00:00",
   "leaks": [
     {
       "source": "Beauty Success",
@@ -29,9 +29,9 @@
       "description": "Google_AI_Pro_2Year_ZeroCost_Auto"
     },
     {
-      "name": "govijr/terminal-mac",
-      "url": "https://github.com/govijr/terminal-mac",
-      "description": "Entire MacOS running in your terminal."
+      "name": "Minireel/HGhub",
+      "url": "https://github.com/Minireel/HGhub",
+      "description": "YellowFruit third-party client"
     }
   ]
 }
