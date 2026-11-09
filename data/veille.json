@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-09T05:22:22+00:00",
+  "updated": "2026-11-09T15:38:15+00:00",
   "leaks": [
+    {
+      "source": "Fédération Française de Tennis de Table",
+      "date": "9 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "Beauty Success",
       "date": "7 novembre 2026",
@@ -10,23 +15,18 @@
       "source": "Burda Style",
       "date": "7 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Delcampe",
-      "date": "6 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
     }
   ],
   "repos": [
     {
-      "name": "KKKKhazix/agent-autoloop",
-      "url": "https://github.com/KKKKhazix/agent-autoloop",
-      "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。"
-    },
-    {
       "name": "Minireel/HGhub",
       "url": "https://github.com/Minireel/HGhub",
       "description": "YellowFruit third-party client"
+    },
+    {
+      "name": "KKKKhazix/agent-autoloop",
+      "url": "https://github.com/KKKKhazix/agent-autoloop",
+      "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。"
     },
     {
       "name": "NotRexed/Hookshot",
