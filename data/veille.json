@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T21:50:21+00:00",
+  "updated": "2026-11-09T05:22:22+00:00",
   "leaks": [
     {
       "source": "Beauty Success",
@@ -24,14 +24,14 @@
       "description": "让你的命令行 Agent 在后台自己接活、自己跟进到底；平时不烦你，遇到拿不准的事才发卡片找你拍板。"
     },
     {
-      "name": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
-      "url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
-      "description": "Google_AI_Pro_2Year_ZeroCost_Auto"
-    },
-    {
       "name": "Minireel/HGhub",
       "url": "https://github.com/Minireel/HGhub",
       "description": "YellowFruit third-party client"
+    },
+    {
+      "name": "NotRexed/Hookshot",
+      "url": "https://github.com/NotRexed/Hookshot",
+      "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake"
     }
   ]
 }
