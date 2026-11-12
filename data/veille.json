@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T00:15:44+00:00",
+  "updated": "2026-11-12T14:50:56+00:00",
   "leaks": [
     {
       "source": "Effy",
@@ -21,7 +21,7 @@
     {
       "name": "huamidev/GestaltX",
       "url": "https://github.com/huamidev/GestaltX",
-      "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups, and sup..."
+      "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups."
     },
     {
       "name": "tangerineturtle1/NX2navi",
