@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-13T05:44:55+00:00",
+  "updated": "2026-11-13T14:12:57+00:00",
   "leaks": [
+    {
+      "source": "Cuisine Addict",
+      "date": "13 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "Macif",
       "date": "12 novembre 2026",
@@ -8,11 +13,6 @@
     },
     {
       "source": "Effy",
-      "date": "11 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Garanka",
       "date": "11 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
