@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T22:07:33+00:00",
+  "updated": "2026-11-15T05:31:53+00:00",
   "leaks": [
     {
       "source": "Securitest",
@@ -24,14 +24,14 @@
       "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups."
     },
     {
-      "name": "jhaizhou-ops/S2Arm",
-      "url": "https://github.com/jhaizhou-ops/S2Arm",
-      "description": "Run your own Switch games natively on iPhone, iPad and Mac: game code rewritten to ARM64, graphics d..."
-    },
-    {
       "name": "Kianuni/Erosion-CN",
       "url": "https://github.com/Kianuni/Erosion-CN",
       "description": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（简体中文防白苹果安全加固版）"
+    },
+    {
+      "name": "apex-compute/ANR",
+      "url": "https://github.com/apex-compute/ANR",
+      "description": "Apex Neural Rendering (ANR) by Apex Compute"
     }
   ]
 }
