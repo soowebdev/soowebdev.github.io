@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T13:40:15+00:00",
+  "updated": "2026-11-15T22:36:53+00:00",
   "leaks": [
     {
       "source": "Securitest",
@@ -29,9 +29,9 @@
       "description": "Chat Demo"
     },
     {
-      "name": "Kianuni/Erosion-CN",
-      "url": "https://github.com/Kianuni/Erosion-CN",
-      "description": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（简体中文防白苹果安全加固版）"
+      "name": "apex-compute/ANR",
+      "url": "https://github.com/apex-compute/ANR",
+      "description": "Apex Neural Rendering (ANR) by Apex Compute"
     }
   ]
 }
