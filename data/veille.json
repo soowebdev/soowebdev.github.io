@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T22:36:53+00:00",
+  "updated": "2026-11-16T05:32:23+00:00",
   "leaks": [
     {
       "source": "Securitest",
@@ -19,11 +19,6 @@
   ],
   "repos": [
     {
-      "name": "huamidev/GestaltX",
-      "url": "https://github.com/huamidev/GestaltX",
-      "description": "An MobileGestalt editor for iOS 27.x, featuring region-code tweaks, device presets, backups."
-    },
-    {
       "name": "deepseek-ai/chat-demo",
       "url": "https://github.com/deepseek-ai/chat-demo",
       "description": "Chat Demo"
@@ -32,6 +27,11 @@
       "name": "apex-compute/ANR",
       "url": "https://github.com/apex-compute/ANR",
       "description": "Apex Neural Rendering (ANR) by Apex Compute"
+    },
+    {
+      "name": "Kianuni/Erosion-CN",
+      "url": "https://github.com/Kianuni/Erosion-CN",
+      "description": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（中英双语 · 防白苹果安全加固版） | Bootloop-safe iOS / iPadOS System Configu..."
     }
   ]
 }
