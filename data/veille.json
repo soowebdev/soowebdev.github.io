@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-16T15:12:35+00:00",
+  "updated": "2026-11-17T01:44:03+00:00",
   "leaks": [
     {
-      "source": "Securitest",
-      "date": "14 novembre 2026",
+      "source": "Ipsos",
+      "date": "16 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Cuisine Addict",
-      "date": "13 novembre 2026",
+      "source": "La fabrique à filets",
+      "date": "16 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Macif",
-      "date": "12 novembre 2026",
+      "source": "Trezor",
+      "date": "15 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
@@ -29,9 +29,9 @@
       "description": "Apex Neural Rendering (ANR) by Apex Compute"
     },
     {
-      "name": "Kianuni/Erosion-CN",
-      "url": "https://github.com/Kianuni/Erosion-CN",
-      "description": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱（中英双语 · 防白苹果安全加固版） | Bootloop-safe iOS / iPadOS System Configu..."
+      "name": "hitkeeen/blender-ai-mcp-addon",
+      "url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
+      "description": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with..."
     }
   ]
 }
