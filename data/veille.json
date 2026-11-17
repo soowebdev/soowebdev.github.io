@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T01:44:03+00:00",
+  "updated": "2026-11-17T15:41:21+00:00",
   "leaks": [
     {
       "source": "Ipsos",
@@ -29,9 +29,9 @@
       "description": "Apex Neural Rendering (ANR) by Apex Compute"
     },
     {
-      "name": "hitkeeen/blender-ai-mcp-addon",
-      "url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
-      "description": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with..."
+      "name": "Noniv/abyssal-garden",
+      "url": "https://github.com/Noniv/abyssal-garden",
+      "description": "A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a su..."
     }
   ]
 }
