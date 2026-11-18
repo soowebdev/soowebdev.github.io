@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-17T15:41:21+00:00",
+  "updated": "2026-11-18T00:44:48+00:00",
   "leaks": [
+    {
+      "source": "Contabo",
+      "date": "17 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "Ipsos",
       "date": "16 novembre 2026",
@@ -9,11 +14,6 @@
     {
       "source": "La fabrique à filets",
       "date": "16 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Trezor",
-      "date": "15 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
@@ -24,9 +24,9 @@
       "description": "Chat Demo"
     },
     {
-      "name": "apex-compute/ANR",
-      "url": "https://github.com/apex-compute/ANR",
-      "description": "Apex Neural Rendering (ANR) by Apex Compute"
+      "name": "krisgfx9/Wireless-Device-Battery-Monitor",
+      "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
+      "description": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 ta..."
     },
     {
       "name": "Noniv/abyssal-garden",
