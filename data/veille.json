@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-18T00:44:48+00:00",
+  "updated": "2026-11-18T15:21:03+00:00",
   "leaks": [
+    {
+      "source": "Made in Bébé",
+      "date": "18 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
+      "source": "Snowleader",
+      "date": "18 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "Contabo",
       "date": "17 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Ipsos",
-      "date": "16 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "La fabrique à filets",
-      "date": "16 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
@@ -29,9 +29,9 @@
       "description": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 ta..."
     },
     {
-      "name": "Noniv/abyssal-garden",
-      "url": "https://github.com/Noniv/abyssal-garden",
-      "description": "A dreamy underwater world you can swim through in your browser: swaying kelp forests, sunbeams, a su..."
+      "name": "erkamyaman/rust-anything",
+      "url": "https://github.com/erkamyaman/rust-anything",
+      "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavio..."
     }
   ]
 }
