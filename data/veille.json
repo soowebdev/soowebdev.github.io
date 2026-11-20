@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-19T15:27:44+00:00",
+  "updated": "2026-11-20T00:24:47+00:00",
   "leaks": [
+    {
+      "source": "AlloBébé",
+      "date": "19 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "Made in Bébé",
       "date": "18 novembre 2026",
@@ -9,11 +14,6 @@
     {
       "source": "Snowleader",
       "date": "18 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Contabo",
-      "date": "17 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
