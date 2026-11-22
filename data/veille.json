@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T18:52:21+00:00",
+  "updated": "2026-11-22T05:46:46+00:00",
   "leaks": [
     {
       "source": "Seazon",
@@ -24,14 +24,14 @@
       "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavio..."
     },
     {
+      "name": "ItsNotRexed/Leonida",
+      "url": "https://github.com/ItsNotRexed/Leonida",
+      "description": "Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6"
+    },
+    {
       "name": "krisgfx9/Wireless-Device-Battery-Monitor",
       "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
       "description": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 ta..."
-    },
-    {
-      "name": "gylive/google-ultra",
-      "url": "https://github.com/gylive/google-ultra",
-      "description": "Pas de description."
     }
   ]
 }
