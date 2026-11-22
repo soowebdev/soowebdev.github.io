@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T14:18:11+00:00",
+  "updated": "2026-11-22T23:24:41+00:00",
   "leaks": [
     {
       "source": "Seazon",
@@ -29,9 +29,9 @@
       "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavio..."
     },
     {
-      "name": "krisgfx9/Wireless-Device-Battery-Monitor",
-      "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
-      "description": "Show the battery level of wireless mice, headsets, keyboards and controllers on the Windows 10/11 ta..."
+      "name": "bookwjitchieni1986/blender-ai-mcp-addon",
+      "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+      "description": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with..."
     }
   ]
 }
