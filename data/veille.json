@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T23:24:41+00:00",
+  "updated": "2026-11-23T06:33:28+00:00",
   "leaks": [
     {
       "source": "Seazon",
@@ -24,14 +24,14 @@
       "description": "Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6"
     },
     {
-      "name": "erkamyaman/rust-anything",
-      "url": "https://github.com/erkamyaman/rust-anything",
-      "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavio..."
-    },
-    {
       "name": "bookwjitchieni1986/blender-ai-mcp-addon",
       "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
       "description": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with..."
+    },
+    {
+      "name": "EL4CTEO/fast-anything",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the ho..."
     }
   ]
 }
