@@ -1,37 +1,37 @@
 {
-  "updated": "2026-11-23T06:33:28+00:00",
+  "updated": "2026-11-23T23:35:41+00:00",
   "leaks": [
+    {
+      "source": "LWS",
+      "date": "23 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
     {
       "source": "Seazon",
       "date": "20 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "AlloBébé",
-      "date": "19 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Made in Bébé",
-      "date": "18 novembre 2026",
+      "source": "Delubac",
+      "date": "20 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
   "repos": [
     {
-      "name": "ItsNotRexed/Leonida",
-      "url": "https://github.com/ItsNotRexed/Leonida",
+      "name": "ProjectLeonida/Leonida",
+      "url": "https://github.com/ProjectLeonida/Leonida",
       "description": "Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6"
-    },
-    {
-      "name": "bookwjitchieni1986/blender-ai-mcp-addon",
-      "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
-      "description": "AI assistant and MCP server for Blender: visual chat, scene tools, multi-agent workflows. Works with..."
     },
     {
       "name": "EL4CTEO/fast-anything",
       "url": "https://github.com/EL4CTEO/fast-anything",
       "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the ho..."
+    },
+    {
+      "name": "iamajmeena/neonclipping",
+      "url": "https://github.com/iamajmeena/neonclipping",
+      "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-fi..."
     }
   ]
 }
