@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-24T09:02:07+00:00",
+  "updated": "2026-11-24T22:05:06+00:00",
   "leaks": [
     {
-      "source": "LWS",
-      "date": "23 novembre 2026",
+      "source": "Decathlon",
+      "date": "24 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Seazon",
-      "date": "20 novembre 2026",
+      "source": "Go Tronic",
+      "date": "24 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Delubac",
-      "date": "20 novembre 2026",
+      "source": "LocService",
+      "date": "24 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
   ],
@@ -24,8 +24,8 @@
       "description": "An attempt at running GTA VI on PC"
     },
     {
-      "name": "ivall/xcl",
-      "url": "https://github.com/ivall/xcl",
+      "name": "xcl-dev/xcl",
+      "url": "https://github.com/xcl-dev/xcl",
       "description": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the cons..."
     },
     {
