@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T23:35:41+00:00",
+  "updated": "2026-11-24T09:02:07+00:00",
   "leaks": [
     {
       "source": "LWS",
@@ -19,19 +19,19 @@
   ],
   "repos": [
     {
-      "name": "ProjectLeonida/Leonida",
-      "url": "https://github.com/ProjectLeonida/Leonida",
-      "description": "Leonida Is A Native PC Recompilation Of The Xbox Version Of Grand Theft Auto 6"
+      "name": "Marvisak/VIctory",
+      "url": "https://github.com/Marvisak/VIctory",
+      "description": "An attempt at running GTA VI on PC"
+    },
+    {
+      "name": "ivall/xcl",
+      "url": "https://github.com/ivall/xcl",
+      "description": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the cons..."
     },
     {
       "name": "EL4CTEO/fast-anything",
       "url": "https://github.com/EL4CTEO/fast-anything",
       "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the ho..."
-    },
-    {
-      "name": "iamajmeena/neonclipping",
-      "url": "https://github.com/iamajmeena/neonclipping",
-      "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-fi..."
     }
   ]
 }
