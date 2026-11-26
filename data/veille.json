@@ -1,18 +1,18 @@
 {
-  "updated": "2026-11-26T07:29:36+00:00",
+  "updated": "2026-11-26T21:07:41+00:00",
   "leaks": [
     {
+      "source": "Todoist",
+      "date": "26 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
+      "source": "Interservices",
+      "date": "24 novembre 2026",
+      "description": "Nouvelle fuite de données répertoriée."
+    },
+    {
       "source": "Decathlon",
-      "date": "24 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "Go Tronic",
-      "date": "24 novembre 2026",
-      "description": "Nouvelle fuite de données répertoriée."
-    },
-    {
-      "source": "LocService",
       "date": "24 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
