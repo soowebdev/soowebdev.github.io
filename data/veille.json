@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T07:27:17+00:00",
+  "updated": "2026-11-27T20:51:51+00:00",
   "leaks": [
     {
       "source": "Todoist",
@@ -7,12 +7,12 @@
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Interservices",
-      "date": "24 novembre 2026",
+      "source": "Toulouse MEETT",
+      "date": "26 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     },
     {
-      "source": "Decathlon",
+      "source": "Interservices",
       "date": "24 novembre 2026",
       "description": "Nouvelle fuite de données répertoriée."
     }
@@ -31,7 +31,7 @@
     {
       "name": "EL4CTEO/fast-anything",
       "url": "https://github.com/EL4CTEO/fast-anything",
-      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the ho..."
+      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile your app, port the hot functions with ..."
     }
   ]
 }
