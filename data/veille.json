@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T21:07:41+00:00",
+  "updated": "2026-11-27T07:27:17+00:00",
   "leaks": [
     {
       "source": "Todoist",
@@ -24,14 +24,14 @@
       "description": "An attempt at running GTA VI on PC"
     },
     {
-      "name": "xcl-dev/xcl",
-      "url": "https://github.com/xcl-dev/xcl",
-      "description": "Xbox Series compatibility layer for Windows - runs console game code natively, reimplements the cons..."
-    },
-    {
       "name": "4lwayz/portwatch-vi",
       "url": "https://github.com/4lwayz/portwatch-vi",
       "description": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated ..."
+    },
+    {
+      "name": "EL4CTEO/fast-anything",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the ho..."
     }
   ]
 }
