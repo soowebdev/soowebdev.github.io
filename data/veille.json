@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T20:51:51+00:00",
+  "updated": "2026-11-28T06:56:49+00:00",
   "leaks": [
     {
       "source": "Todoist",
@@ -24,14 +24,14 @@
       "description": "An attempt at running GTA VI on PC"
     },
     {
-      "name": "4lwayz/portwatch-vi",
-      "url": "https://github.com/4lwayz/portwatch-vi",
-      "description": "Does GTA VI run on PC yet? A live tracker of community recompilation and emulation efforts, updated ..."
+      "name": "trustno1-coder/VIctory-NVIDIA",
+      "url": "https://github.com/trustno1-coder/VIctory-NVIDIA",
+      "description": "VIctory (Xbox Series compatibility layer) tuned for NVIDIA RTX cards: Series X at 2560x1440 with DLS..."
     },
     {
-      "name": "EL4CTEO/fast-anything",
-      "url": "https://github.com/EL4CTEO/fast-anything",
-      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile your app, port the hot functions with ..."
+      "name": "fxceless/victory-fork",
+      "url": "https://github.com/fxceless/victory-fork",
+      "description": "Work-in-progress fork of VIctory: getting an Xbox Series title to render and run on a Windows PC. No..."
     }
   ]
 }
